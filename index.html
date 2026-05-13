@@ -3,88 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>serafae</title>
 
   <style>
-    /* ===== BASIC RESET ===== */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    @font-face {
+      font-family: 'Saint';
+      src: url('https://seralyn.neocities.org/assets/fonts/fontfaces/saint.otf') format('opentype');
+      font-display: swap;
     }
-
-    /* ===== PAGE ===== */
 
     body {
-      background-color: #111;
-      color: #f4f4f4;
-      font-family: Verdana, sans-serif;
-      line-height: 1.6;
-
-      padding: 40px;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, rgb(3, 3, 3), rgb(15, 15, 15));
+      color: whitesmoke;
+      font-family: 'New York', serif;
+      line-height: 1.7;
     }
-
-    /* ===== CONTAINER ===== */
 
     .container {
       max-width: 800px;
-      margin: auto;
-
-      background: #1c1c1c;
-      border: 1px solid #333;
-
-      padding: 30px;
+      margin: 60px auto;
+      background: rgba(20, 20, 20, 0.85);
+      border: 2px ridge white;
+      padding: 50px 40px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
-    /* ===== HEADINGS ===== */
-
     h1 {
-      margin-bottom: 10px;
-      font-size: 2rem;
+      font-family: 'Saint', sans-serif;
+      font-size: 3.2rem;
+      margin: 0 0 12px 0;
+      letter-spacing: 4px;
+      text-shadow: 
+        1px 1px 4px white, 
+        0 0 1em #fff, 
+        0 0 1.5em #fff, 
+        0 0 2em #fff, 
+        0 0 2.5em #fff, 
+        0 0 3em rgba(255,255,255,0.9);
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
     }
 
     h2 {
-      margin-top: 30px;
-      margin-bottom: 10px;
-
-      font-size: 1.3rem;
-
-      border-bottom: 1px solid #444;
-      padding-bottom: 5px;
+      font-family: 'Saint', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      text-shadow: 
+        1px 1px 4px white, 
+        0 0 1em #fff, 
+        0 0 0.4em white;
     }
 
-    /* ===== LINKS ===== */
+    nav {
+      margin: 25px 0;
+    }
+
+    nav a {
+      color: whitesmoke;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      color: #8bb8d2;
+      text-shadow: 0 0 8px #8bb8d2;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
 
     a {
-      color: #8ec5ff;
+      color: #8bb8d2;
       text-decoration: none;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: white;
+      text-shadow: 0 0 8px white;
     }
-
-    /* ===== NAV ===== */
-
-    nav {
-      margin-top: 15px;
-      margin-bottom: 25px;
-    }
-
-    nav a {
-      margin-right: 15px;
-    }
-
-    /* ===== FOOTER ===== */
 
     footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.95rem;
       opacity: 0.7;
     }
-
   </style>
 </head>
 
@@ -94,10 +112,7 @@
 
     <header>
       <h1>serafae</h1>
-
-      <p>
-        welcome to my little corner of the internet.
-      </p>
+      <p class="subtitle">welcome to my little corner of the internet.</p>
 
       <nav>
         <a href="index.html">home</a>
@@ -109,13 +124,9 @@
     <main>
 
       <h2>Updates</h2>
-
-      <p>
-        site under construction ★
-      </p>
+      <p>site under construction ★</p>
 
       <h2>Links</h2>
-
       <ul>
         <li><a href="#">neocities</a></li>
         <li><a href="#">github</a></li>
