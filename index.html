@@ -1,750 +1,512 @@
-<html lang="en">
-<head>	
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1024">
-    <title>[WIP] Serafae's Slumber • Diary</title>
-        <link rel="icon" type="image/x-icon" href="https://serafae.neocities.org/favicon/favicon.ico">
-        <link rel="stylesheet" href="https://serafae.neocities.org/css/hover.css" media="all">
-        <link rel="stylesheet" href="https://serafae.neocities.org/css/scrollbar.css" media="all">
-        <link rel="stylesheet" href="https://serafae.neocities.org/css/custom-cursor-trail/stars.css" media="all">
-        
-                    <link rel="stylesheet" href="https://serafae.neocities.org/css/responsive.css" media="all">
-        
-            <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-            <link rel="shortcut icon" href="/">
-            <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">    
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-            
-            
-                                <style>
-                            * {
-                              cursor: url('https://serafae.neocities.org/assets/misc-buttons/cursors/chrome-pointer-main.webp') 34 34, auto !important;
-                            }
-                                </style>
-            
-                      
-                      <style> /* Padding at the top and bottom to keep the page centered and even */
-                  body {
-                    margin: 0;
-                    padding-top: 16px;
-                    padding-bottom: 16px;
-                  }
-                </style>
+<!DOCTYPE HTML>
+<html>
+<!-- 
+feel free to remove all of this!
+---
+template coded by doqmeat. last updaded on 02.dec.25
+---
+live preview: https://doqmeat.com/notebook/F2U/preview/notebook
+---
+more html and css resources @ https://www.w3schools.com/ +  https://developer.mozilla.org/en-US/docs/Learn/HTML. more resources + graphics links can be found here if you need some pointers https://doqmeat.com/notebook
+---
+feel free to contact me for any questions! -->
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>[WIP] Serafae's Slumber • Diary</title>
+				<link rel="icon" type="image/x-icon" href="https://serafae.neocities.org/favicon/favicon.ico">
+				    <meta name="viewport" content="width=1024">
+				        <link rel="stylesheet" href="https://serafae.neocities.org/css/hover.css" media="all">
+				                <link rel="stylesheet" href="https://serafae.neocities.org/css/custom-cursor-trail/stars.css" media="all">
+				                
+			        
+				        
+				        <style>
+				        			* { cursor: url('https://serafae.neocities.org/assets/misc-buttons/cursors/pinkprecision.webp') 47 47, auto !important; }
+				        </style>
+				        
+				        <style>
+                        a:hover {
+                        color: #a1a1a1; 
+                        -moz-transition: 0.7s ease-out;
+                        -webkit-transition: 0.7s ease-out;}
+                        
+                        
+                        #content img:hover, #content a:hover img {
+                        background: url('') top center;
+                        opacity: 1;
+                        border-radius: 0.5px;
+                        border: 1px ridge rgba(205, 205, 205, 0.28);
+                        -webkit-transition: all 0.8s ease-out;
+                        -moz-transition: all 0.8s ease-out;
+                        transition: all 0.8s ease-out;
+                        -webkit-border-radius: 5px;
+                         }
+                        
+                        a.update:hover {
+                          color: #FFDBF0;
+                          text-align: center;
+                          border-left: 10px solid #F2C2DD;
+                          border-right: 10px solid #F2C2DD;
+                          -o-transition-transition: all 0.5s ease-out;
+                          -webkit-transition: all 0.5s ease-out; 
+                          -moz-transition: all 0.5s ease-out;
+                          }
 
-    <style type="text/css">
-    
-    body {
-    overflow-y: hidden;                /* you already have this – keeps vertical scroll off if desired */
-    overflow-x: hidden;
-    
-    
-    
-    font-family: 'New York', serif;
-    color: #3d3d3d;
-    font-size: 17.5px;
-    
-    
-    /* New fixed full-page background setup */
-    background-image: url('https://serafae.neocities.org/images/backgrounds/pink/bg01pinkdecorum.png');
-    background-repeat: no-repeat;      /* stops tiling */
-    background-position: center center;/* centers the image */
-    background-size: cover;            /* scales to cover entire viewport, crops if needed to avoid distortion */
-    background-attachment: fixed;      /* key: image stays fixed in place, doesn't scroll with content */
-    min-height: 100vh;                 /* ensures body covers full viewport height */
-}   
-
-    /* . . . . . . . . . . . . . . . */ 
-    a{
-        color: #836776FF;
-        text-decoration:dotted underline;
-    }
-    a:hover{
-        color: #F8A8D4DB;
-    }
-    
-    /* . . . . . . . . . . . . . . . */            
-
-    ::selection{ 
-        color: #210013FF;
-        background-color: #FD9BD16E;
-    }    
-
-    /* . . . . . . . . . . . . . . . */                
-
-
-    @font-face {
-  font-family: 'New York';
-  src: url('https://serafae.neocities.org/assets/fonts/fontfaces/NewYork.otf') format('opentype');
-  font-display: swap;  /* This line is valid HERE */
-}
-        
-        
-
-    
-    /*********************************
-    
-            Container + Header 
-    
-    *********************************/    
-    
-    #container{
-        width:805px;
-        height:580px;
-        margin-top:10px;
-        position:absolute;
-        left: 50%;
-        z-index:1;
-        background:white;
-        transform: translateX(-50%);
-        border:5px white ridge;
-    }    
-    
-    /* . . . . . . . . . . . . . . . */  
-    
-    #header-content-container{
-        float:right;
-        width:600px;
-        border-top:none;
-        border-right:none;
-        border-bottom:3px white ridge;
-        border-left:5px white ridge;
-        height:100%;
-    }
-    
-    /* . . . . . . . . . . . . . . . */  
-    
-    #header{
-        width:100%;
-        height:160px;
-        object-fit: fill;
-    }
-
-    /* . . . . . . . . . . . . . . . */  
-    
-    #sidebar{
-        float:left;
-        width:197px;
-        position:absolute;
-        height:100%;        
-    }
-    
-
-    /*********************************
-        
-                Content
-    
-    *********************************/
-    
-    #wrapper{
-        float:left;
-        overflow-y:flex;
-        overflow-x:flex;
-        width:100%;
-        height:413px;
-        margin-top:5px;
-    }
-    
-    #main{
-        border:0px white none;
-        width:600px;
-        margin-left:-10px;
-        height:345px;
-        padding:10px;
-        margin-top:5px;
-    }
-
-
-    </style>
-    </head>
-    
-    
-    <body>
-    
-        <div id="container">
-            <div id="header-content-container">
-                <div id="header" style="background-position: 20% 80%; 
-        background-image:url('https://serafae.neocities.org/assets/headers/header_frutigermetro_dark_pink.png');">
-                    <div style="height:123px;padding:5px;background: linear-gradient(to right, #23000f 25%, transparent);width:100%;">
-                        <div style="border-radius:10px;
-            position:absolute;
-            margin-top:5px;
-            background-image:url('https://serafae.neocities.org/assets/personal+icons/frutiger/metro_66_pink.png');
-            background-size: 50% 145px;          /* ← 100% width + adjusted fixed height to show more without cropping too much */
-            background-repeat: no-repeat;
-            background-position: center;          /* keeps graphic centered horizontally */
-            z-index:1;
-            margin-left: 15px;
-            height: 123px;                        /* ← match the background-size height exactly so no overflow/clipping issues */
-            width: calc(100% - 20px);             /* ← fills available space minus margins, prevents wrapper squeeze */
-            ">
-                            <div style="margin-left:2.5px;">
-      <a data-toggle="tooltip" title="Refresh?" href="/" style="
-              text-shadow: 1px 1px 4px #E4007C,
-              0 0 0.8em #db5e98,
-              0 0 1.2em #db5e98,
-              0 0 1.6em #db5e98,
-              0 0 2em #db5e98;
-              0 0 2.5em #db5e98,
-              0 0 3em rgba(228, 0, 124, 0.9);
-              color: white;
-              font-size: 45px;
-              font-family: Saint;
-              text-decoration: none;
-              font-weight: bold;
-              font-style: italic;">
-              Shouldn't I have...
-          </a>
-</div>
+                            </style>
                             
-                            <div style="margin-left: 30px; margin-top:1px;">
-      <a data-toggle="tooltip" title="Refresh?" href="/" style="
-              text-shadow: 
-                  1px 1px 4px #E4007C, 
-                  0 0 1em #db5e98, 
-                  0 0 1.5em #db5e98, 
-                  0 0 2em #db5e98, 
-                  0 0 2.5em #db5e98, 
-                  0 0 3em rgba(228, 0, 124, 0.9);
-              color: white;
-              font-size: 37px;
-              font-family: Saint;
-              text-decoration: none;
-              font-style: italic;">
-              told you when it mattered?
-          </a>
-</div>
-                        </div>
-                    </div>
-                    <div>
-                    
-                    <style>
-                        .blinkie-bar{
-    width:600px;
-    height:27px;
+                                    <style>
+                                                              /* . . . . . . . . . . . . . . . */ 
+                                         a{
+                                  color: #836776FF;
+                                  text-decoration:dotted underline;
+                              }
+                                      a:hover{
+                                          color: #F8A8D4DB;
+                                      }
+                                  
+                                  /* . . . . . . . . . . . . . . . */            
+                              
+                                             ::selection{ 
+                                            color: #210013FF;
+                                            background-color: #FD9BD16E;
+                                                                        }    
+                                  /* . . . . . . . . . . . . . . . */   
+                                        </style>
+				        
+				        
+                                				        <style>
+                                                				            /* . . . . . . . . . . . . . . . */                
+                                                
+                                                    @font-face {
+                                                        font-family: 'Griffiths';
+                                                        src:url(https://serafae.neocities.org/assets/fonts/fontfaces/Griffiths.otf);
+                                                    }    
+                                                    
+                                                      /* . . . . . . . . . . . . . . . */ 
+                                                      
+                                                      /* . . . . . . . . . . . . . . . */                
+                                                
+                                                    @font-face {
+                                                        font-family: 'Parode';
+                                                        src:url(https://serafae.neocities.org/assets/fonts/fontfaces/Parode.otf);
+                                                    }    
+                                                    
+                                                      /* . . . . . . . . . . . . . . . */ 
+                                                      
+                                                      </style>
+                                                      
+                                                          <style>
+                                                ::-webkit-scrollbar-thumb {
+                                                background-color: #FFF0F8FF;  
+                                                border-radius: 0px;
+                                                border:1px solid #ccc;
+                                                }
+                                                ::-webkit-scrollbar {
+                                                width: 8px;
+                                                height: 0px; 
+                                                background: #FFF9FCFF;
+                                                }
+                                                </style>
 
-    overflow:hidden;
-    display:flex;
-    align-items:center;
+                                				        
+	<style>
+		html {
+			/* feel free to delete this if you just want the normal cursor! */
+                                
 
-    background:#fff;
-    border-top:3px ridge #fff;
-    border-bottom:3px ridge #fff;
-}
-
-.blinkie-track{
-    display:flex;
-    align-items:center;
-    flex-wrap:nowrap;
-    width:max-content;
-
-    animation:blinkieScroll 10.5s linear infinite;
-    will-change:transform;
-}
-
-.blinkie-bar:hover .blinkie-track{
-    animation-play-state:paused;
-}
-
-.blinkie{
-    width:150px;      /* or whatever fits */
-    height:20px;
-    object-fit:contain;
-    margin:0 3px;
-    flex-shrink:0;
-}
-
-.blinkie:hover{
-    transform:translateY(-2px) scale(1.04);
-    filter:brightness(1.5);
-}
-
-@keyframes blinkieScroll{
-    from{
-        transform:translate3d(0,0,0);
-    }
-    to{
-        transform:translate3d(-50%,0,0);
-    }
-}
-                    </style>
-                        
-                    </div>
-                    
-<div class="blinkie-bar">
-    <div class="blinkie-track">
-
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_prettyinpunk.gif" alt="blinkie9" class="blinkie">
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_studbelt.gif" alt="blinkie1" class="blinkie">
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_uncool.gif" alt="blinkie2" class="blinkie">
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_stars.gif" alt="blinkie3" class="blinkie">
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_kaomoji.gif" alt="blinkie4" class="blinkie">
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_air_guitar.gif" alt="blinkie5" class="blinkie">
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_angelwatch.gif" alt="blinkie6" class="blinkie">
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hyper.gif" alt="blinkie7" class="blinkie">
-        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hot.gif" alt="blinkie8" class="blinkie">
-        
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_prettyinpunk.gif" alt="blinkie9" class="blinkie">
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_studbelt.gif" alt="blinkie1" class="blinkie">
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_uncool.gif" alt="blinkie2" class="blinkie">
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_stars.gif" alt="blinkie3" class="blinkie">
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_kaomoji.gif" alt="blinkie4" class="blinkie">
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_air_guitar.gif" alt="blinkie5" class="blinkie">
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_angelwatch.gif" alt="blinkie6" class="blinkie">
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hyper.gif" alt="blinkie7" class="blinkie">
-                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hot.gif" alt="blinkie8" class="blinkie">
-        
-    </div>
-</div>
-                    
-                </div>
-                
-                <div id="wrapper">
-                    <div id="main">
-                        <table>
-                            <tbody>
-                                <tr>
-                                                            <div>
-                                        <div class="diary-frame">
-                                                    <iframe 
-                                                        src="https://serafae.neocities.org/pages/diary.html"
-                                                        title="Serafae's Diary,"
-                                                        scrolling="yes"
-                                                        frameborder="0"
-                                                        allowfullscreen>
-                                                    </iframe>
-                                        </div>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>   
-
-<style>
-.diary-frame iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Try to apply your scrollbar inside the iframe */
-.diary-frame iframe::-webkit-scrollbar {
-    width: 0px;
-}
-.diary-frame iframe::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 0px;
-}
-</style>
-
-<style>
-
-.diary-frame {
-    width: 553px;
-    height: 373px;
-    margin: 0 auto;
-    border: 7px solid #434343;
-    border-image: url('https://serafae.neocities.org/assets/personal+icons/icons/dark_raspberry_decor-blob.png') 6 fill round;
-    overflow: hidden;
-    display: block;
-    box-shadow: 0 0 12px whitesmoke;
-}
-
-.diary-frame iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-}
-</style>
-            
-                <style>
-@font-face {
-  font-family: 'Saint';
-  src: url('https://serafae.neocities.org/assets/fonts/fontfaces/Saint.otf') format('opentype');
-  font-display: swap;  /* This line is valid HERE */
-}
-</style>
-            
-                        <div id="sidebar">
-                        
-<div style="background: linear-gradient(to bottom, rgb(3, 3, 3) 15%, rgb(56, 56, 56));
-            border:2px ridge white;
-            border-top:none;
-            text-align:center;
-            color:white;
-            font-weight:bold;
-            font-size:21px;
-            width:202px;
-            border-right:none;
-            border-left:none;">
-            
-    <div id="calendarBox">
-    <iframe src="https://serafae.neocities.org/pages/widgets/calendar.html" scrolling="no"></iframe>
-        
-</div>
-    <style>
-        #calendarBox {
-    width: 202px;
-    height: 202px;              /* make it a true square */
-    padding: 0;
-    box-sizing: border-box;
-
-    border: 2px ridge white;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-
-    background: black;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-#calendarBox iframe {
-    width: 260px;
-    height: 260px;
-    border: none;
-
-    transform: scale(0.77);     /* 202 / 260 ≈ 0.77 */
-    transform-origin: center;
-}</style>
-</div>
-            
-                
-                
-<div style="background: linear-gradient(0deg, rgba(199, 72, 133, 1) 0%,rgba(109, 33, 70, 1) 22%,rgba(36, 0, 21, 255) 55%);
-            border:2px ridge white;
-            border-top:none;
-            text-align:center;
-            color:whitesmoke;
-            font-weight:bold;
-            font-size:21px;
-            width:202px;
-            border-right:none;
-            border-left:none;">
-    <div style="font-family:Saint;
-                letter-spacing:.5px;
-                text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;">Navigation</div>
-</div>            
-                <div style="padding:5px;">
-                    <div style="background:#fff2fa"><a href="/main.html">Main</a></div>
-                    <a href="/about_me.html">About Me</a>
-                    <div style="background:#fff2fa"><a href="/guestbook.html">Guestbook</a></div>
-                    <a href="/webmastery.html">Webmastery</a>
-                </div>
-                
-<div style="background: linear-gradient(0deg, rgba(199, 72, 133, 1) 0%,rgba(109, 33, 70, 1) 22%,rgba(36, 0, 21, 255) 55%);
-            border:2px ridge white;
-            border-top:none;
-            text-align:center;
-            color:whitesmoke;
-            font-weight:bold;
-            font-size:21px;
-            width:202px;
-            border-right:none;
-            border-left:none;">
-    <div style="font-family:Saint;
-                letter-spacing:.5px;
-                text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;">
-        Works
-    </div>
-</div>            
-                <div style="padding:5px;">
-                    <div style="background:#fff2fa"><a href="/art.html">Art</a></div>
-                    <a href="/diary.html">Diary</a>
-                    <div style="background:#fff2fa"><a href="/lyrics.html">Lyrics</a></div>
-                    <a href="/projects.html">Projects</a>
-                    <div style="background:#fff2fa"><a href="/shrines.html">Shrines</a></div>
-                </div>
-                
-<div style="background: linear-gradient(0deg, rgba(199, 72, 133, 1) 0%,rgba(109, 33, 70, 1) 22%,rgba(36, 0, 21, 255) 55%);
-            border:2px ridge white;
-            border-top:none;
-            text-align:center;
-            color:whitesmoke;
-            font-weight:bold;
-            font-size:21px;
-            width:202px;
-            border-right:none;
-            border-left:none;">
-    <div style="font-family:Saint;
-                letter-spacing:.5px;
-                text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;">
-        Resources
-    </div>
-</div>            
-                <div style="padding:5px;">
-                    <div style="background:#fff2fa"><a href="sitemap.html">Sitemap</a></div>
-                    <a href="acknowledgments.html">Acknowledgments</a>
-                    <div style="background:#fff2fa"><a href="terms-of-service.html">Terms &amp; Conditions</a></div>
-        
-                
-</div>            
-                <div style="padding:5px;">
-                    <div style="background:#fff2fa"></div>
-                    </div>
-            </div>
-            
-        </div>
-        
-<script type="text/javascript">function showTime(){
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var session = "AM";
+body {
+    background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+        url('https://serafae.neocities.org/images/backgrounds/pink/pinkmusicnotesbg01.png') center center / cover no-repeat;
     
-    if(h == 0){
-        h = 12;
-    }
-    
-    if(h > 12){
-        h = h - 12;
-        session = "PM";
-    }
-    
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-    
-    var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-    
-    setTimeout(showTime, 1000);
-    
+      background-attachment: fixed;     /* Keeps it in place when scrolling */
+      min-height: 100vh;                /* Ensures it covers full height */
+      margin: 0;
+      padding: 0;		
+			margin: 0px;
+			word-wrap: break-word;
+			font-size: 19px;
+			line-height: 25px;
+			word-spacing: 4px;
+			font-family: 'Griffiths', serif;
+			/* ms pgothic is not compatible with safari or mobile devices*/
+			color: #323232;
+		}
+
+		mark {
+			background: #ffff00;
+		}
+
+#wrapper-index {
+    background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+        url('https://serafae.neocities.org/images/backgrounds/pink/ribbon_background_noir_pink.png') center/cover no-repeat;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    width: 1108px;
+    padding: 20px 10px 15px 10px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.7);
 }
 
-showTime();
-</script> 
+		/*this is my ugly binder spiral! feel free to remove it or change it. it wont mess the rest of the code! */
+		#tab1-wrapper:after,
+		#tab2-wrapper:after,
+		#tab3-wrapper:after,
+		#tab4-wrapper:after,
+		#tab5-wrapper:after,
+		#tab6-wrapper:after,
+		#tab7-wrapper:after,
+		#tab8-wrapper:after
+		
+      		{
+      			content: url(https://serafae.neocities.org/assets/personal+icons/icons/pink_binder_spiral.png);
+      			position: absolute;
+      			z-index: 10;
+      			transform: translate(-50%, -50%);
+      			-ms-transform: translate(-50%, -50%);
+      			top: 50%;
+      			left: 50%;
+      			pointer-events: none;
+      		}
 
-        <!-- end of #container -->
+		/* PAGES CSS */
 
-        <!-- CRT OVERLAY - MUST BE HERE -->
+		.paper {
+			/*the CSS of both "pages" boxes. you can choose the look of ALL pages here */
+			background: url('https://serafae.neocities.org/assets/personal+icons/icons/leaf-loose-paper-pink.png');
+			z-index: 5;
+			position: relative;
+			display: inline-block;
+			box-sizing: border-box;
+			border: 1px solid lightgrey;
+			height: 600px;
+		}
+
+		.left {
+			width: 490px;
+			margin-left: 50px;
+			margin-right: 10px;
+			border-radius: 10px 0px 0px 10px;
+			overflow: hidden;
+		}
+
+		.left-in {
+			/*			the main purpose of this class if so the scrollbar of left pages arent obscured by the bind spiral */
+			padding: 15px 10px 15px 25px;
+			height: 100%;
+			margin-right: 15px;
+			overflow: auto;
+		}
+
+		.right {
+			padding: 15px 25px;
+			width: 490px;
+			margin-left: 10px;
+			border-radius: 0px 10px 10px 0px;
+			overflow: auto;
+		}
+
+		/* you can also customize the look of SPECIFIC pages. take TAB 2 for example: */
+		/* you can use .tab2-p class on both pages */
+		.tab2-p {
+			font-family: 'Griffiths', serif;
+			font-size: 19px;
+			background: url('https://serafae.neocities.org/assets/personal+icons/icons/leaf-loose-paper-pink.png');
+			border-color: lightgrey;
+		}
+
+		/* tab buttons CSS stuff */
+
+		.tab {
+			/* for the ones on the left */
+			width: 590px;
+			height: 50px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			rotate: -90deg;
+			top: -10px;
+			left: -232px;
+		}
+
+		.tab2 {
+			/* for the ones on the right */
+			width: 590px;
+			height: 50px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			rotate: 90deg;
+			top: 590px;
+			right: -232px;
+		}
+
+		.tab button,
+		.tab2 button {
+			/*this is the look of the TABS! */
+			z-index: 1;
+			position: relative;
+			vertical-align: top;
+			/* when changing fonts it might mess with the tabs and make them dissappear... change the width when that happens */
+			width: 120px;
+			margin: 0px 8px;
+			padding: 10px 0px 30px 0px;
+			/* inherits the font-family from the ones in the body */
+			font-family: 'Parode';
+			cursor:url('https://serafae.neocities.org/assets/misc-buttons/cursors/pinkprecision.webp');
+			font-size: 17px;
+			transition-duration: 0.5s;
+			top: 10px;
+			border-radius: 10px 10px 0 0;
+			border: 1px solid #ffdbf0;
+		}
+
+		/* here you can change the color of each individual TAB button*/
+		.tab1-b {
+            background:radial-gradient(circle,rgba(255,240,248,1)14%,rgba(255,154,225,1)91%);
+		}
+
+		.tab2-b {
+            background:radial-gradient(circle,rgba(255,240,248,1)14%,rgba(255,154,225,1)91%);
+		}
+
+		.tab3-b {
+            background:radial-gradient(circle,rgba(255,240,248,1)14%,rgba(255,154,225,1)91%);
+		}
+
+		.tab4-b {
+            background:radial-gradient(circle,rgba(255,240,248,1)14%,rgba(255,154,225,1)91%);
+		}
+
+		.tab5-b {
+            background:radial-gradient(circle,rgba(255,240,248,1)14%,rgba(255,154,225,1)91%);
+		}
+		
+		.tab6-b {
+            background:radial-gradient(circle,rgba(255,240,248,1)14%,rgba(255,154,225,1)91%);
+		}
+		
+		.tab7-b {
+            background:radial-gradient(circle,rgba(255,240,248,1)14%,rgba(255,154,225,1)91%);
+		}
+		
+		.tab8-b {
+            background:radial-gradient(circle,rgba(255,240,248,1)14%,rgba(255,154,225,1)91%);
+		}
+		
+
+		/* hover effect of TAB*/
+		.tab button:hover,
+		.tab2 button:hover {
+			top: 0px;
+			cursor: -webkit-grab;
+			cursor: grab;
+		}
+
+		/* selected TAB effect aka when its focused */
+		.tab button.active,
+		.tab2 button.active {
+			top: 0px;
+			cursor: -webkit-grabbing;
+			cursor: grabbing;
+			box-shadow: 1px 1px 20px 1px rgba(255,210,242);
+			outline: none;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<!-- 	NOTEBOOK wrapper -->
+	<div id="wrapper-index">
+
+		<div class="tab">
+			<button class="tablinks tab4-b" onclick="openTab('tab4-wrapper')">Entry #4</button>
+			<button class="tablinks tab3-b" onclick="openTab('tab3-wrapper')">Entry #3</button>
+			<button class="tablinks tab2-b" onclick="openTab('tab2-wrapper')">Entry #2</button>
+			<button class="tablinks tab1-b" onclick="openTab('tab1-wrapper')" id="defaultOpen">Entry #1</button> <!-- 	id="defaultOpen" chooses which tab the notebook will have open when page is loaded -->
+		</div>
+
+		<div class="tab2">
+			<button class="tablinks tab5-b" onclick="openTab('tab5-wrapper')">Entry #5</button>
+			<button class="tablinks tab6-b" onclick="openTab('tab6-wrapper')">Entry #6</button>
+			<button class="tablinks tab7-b" onclick="openTab('tab7-wrapper')">Entry #7</button>
+			<button class="tablinks tab8-b" onclick="openTab('tab8-wrapper')">Entry #8</button>
+		</div>
+
+		<!-- 	TAB 1 wrapper -->
+		<div id="tab1-wrapper" class="tabcontent">
+			<div class="paper left">
+				<div class="left-in">
+					<p><img src="https://serafae.neocities.org/images/photos/Placeholder1.png" width="40%" align="left" style="margin:10px;">WARNING: IMAGES ARE YET TO BE BACKED-UP AND REPLACED (DEMO-ONLY).</p>
+					<p>
+					Donskoy burmese bengal malkin panther. Savannah tiger havana brown yet bobcat norwegian forest. Ocicat singapura yet sphynx, but devonshire rex tomcat. Norwegian forest balinese grimalkin mouser. Munchkin bengal, but bengal american shorthair.</p><p>Burmese maine coon malkin or cornish rex or birman but maine coon, but birman. Panther puma thai.</p>
+
+					<p><img src="https://serafae.neocities.org/images/photos/Placeholder3.png" width="40%" align="right" style="margin:10px;">Mouser turkish angora siberian mouser. Puma kitty, cornish rex so panther. Donskoy burmese bengal malkin panther. Savannah devonshire rex yet egyptian mau norwegian forest singapura yet lion but ragdoll. American shorthair ragdoll so tom so persian ocicat and puma for mouser. Scottish fold norwegian forest. Savannah tiger havana brown yet bobcat norwegian forest. Ocicat singapura yet sphynx, but devonshire rex tomcat. Norwegian forest balinese grimalkin mouser. Munchkin bengal, but bengal american shorthair. Burmese maine coon malkin or cornish rex or birman but maine coon, but birman. Panther puma thai.</p>
+					<!-- TAB 1 left paper end divs -->
+				</div>
+			</div>
+			<div class="paper right">
+				<p><img src="https://serafae.neocities.org/images/photos/Placeholder4.png" width="40%" align="right" style="margin:10px;">Mouser turkish angora siberian mouser. Puma kitty, cornish rex so panther. Donskoy burmese bengal malkin panther. Savannah tiger havana brown yet bobcat norwegian forest. Ocicat singapura yet sphynx, but devonshire rex tomcat. Norwegian forest balinese grimalkin mouser. Munchkin bengal, but bengal american shorthair. Burmese maine coon malkin or cornish rex or birman but maine coon, but birman. Panther puma thai.</p>
+
+				<p><img src="https://serafae.neocities.org/images/photos/Placeholder2.png" width="40%" align="left" style="margin:10px;">Mouser turkish angora siberian mouser. Puma kitty, cornish rex so panther. Donskoy burmese bengal malkin panther. Savannah devonshire rex yet egyptian mau norwegian forest singapura yet lion but ragdoll. American shorthair ragdoll so tom so persian ocicat and puma for mouser. Scottish fold norwegian forest. Savannah tiger havana brown yet bobcat norwegian forest. Ocicat singapura yet sphynx, but devonshire rex tomcat. Norwegian forest balinese grimalkin mouser. Munchkin bengal, but bengal american shorthair. Burmese maine coon malkin or cornish rex or birman but maine coon, but birman. Panther puma thai.</p>
+				<!-- TAB 1 right paper end divs -->
+			</div>
+			<!-- 	TAB 1 wrapper end div -->
+		</div>
+
+		<!-- TAB 2 wrapper -->
+		<div id="tab2-wrapper" class="tabcontent">
+			<div class="tab2-p paper left">
+				<div class="left-in">
+					tab 2 pages
+
+					<!-- TAB 2 left paper end divs -->
+				</div>
+			</div>
+			<div class="tab2-p paper right">
+				text goes here!
+
+				<!-- TAB 2 right paper end div -->
+			</div>
+			<!-- TAB 2 wrapper end div -->
+		</div>
+
+		<div id="tab3-wrapper" class="tabcontent">
+			<div class="paper left">
+				<div class="left-in">
+					tab 3 pages
+
+				</div>
+			</div>
+			<div class="paper right">
+				text goes here!
+
+			</div>
+		</div>
+
+		<div id="tab4-wrapper" class="tabcontent">
+			<div class="paper left">
+				<div class="left-in">
+					tab 4 pages
+
+				</div>
+			</div>
+			<div class="paper right">
+				text goes here!
+
+
+			</div>
+		</div>
+
+
+		<div id="tab5-wrapper" class="tabcontent">
+			<div class="paper left">
+				<div class="left-in">
+					tab 5 pages
+
+				</div>
+			</div>
+			<div class="paper right">
+				text goes here!
+
+			</div>
+		</div>
+
+		<div id="tab6-wrapper" class="tabcontent">
+			<div class="paper left">
+				<div class="left-in">
+					tab 6 pages
+
+				</div>
+			</div>
+			<div class="paper right">
+				text goes here!
+
+			</div>
+		</div>
+
+		<div id="tab7-wrapper" class="tabcontent">
+			<div class="paper left">
+				<div class="left-in">
+					tab 7 pages
+
+				</div>
+			</div>
+			<div class="paper right">
+				text goes here!
+
+			</div>
+		</div>
+
+		<div id="tab8-wrapper" class="tabcontent">
+			<div class="paper left">
+				<div class="left-in">
+					tab 8 pages
+
+				</div>
+			</div>
+			<div class="paper right">
+				text goes here!
+
+			</div>
+		</div>
+
+
+		<!-- TEMPLATE for new set of TAB pages that you can copypaste
+
+	<div id="tab[num]-wrapper" class="tabcontent">
+	<div class="tab[num]-p paper left">
+ <div class="left-in">
+		text goes here
+
+		</div></div>
+	<div class="tab[num]-p paper right">
+		text goes here
+
+	</div></div>
+
+-->
+
+		<!-- NOTEBOOK wrapper end div -->
+	</div>
+
+
+	<script>
+		// awesome javascript to make everything work
+		function openTab(tabName) {
+			var i;
+			var tab = document.getElementById(tabName);
+			var otherContent = document.getElementsByClassName("tabcontent");
+			var defaultOpen = document.getElementById("defaultOpen");
+			var buttons = document.getElementsByClassName("tablinks");
+			for (i = 0; i < otherContent.length; i++) {
+				otherContent[i].style.display = "none";
+			}
+			for (i = 0; i < buttons.length; i++) {
+				buttons[i].classList.remove("active");
+			}
+			tab.style.display = "block";
+			event.currentTarget.className += " active";
+		}
+		document.getElementById("defaultOpen").click();
+
+	</script>
+	
+</body>
+
+
+
         <div id="crt">
         </div>
-        <style>
-        	/* =============================================
-   STANDALONE CRT OVERLAY - GRUNGE EDITION
-   Halved darkness from the original
-   (scanlines now 0.125 instead of 0.25, flicker layer 0.05 instead of 0.1)
-   Perfect subtle grunge without washing out your yellows/blues
-   ============================================= */
-
-#crt {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    pointer-events: none;
-}
-
-/* === SCANLINES + RGB SPLIT (halved) === */
-#crt::before {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: 
-        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.125) 50%), 
-        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    z-index: 100;
-    background-size: 100% 2px, 3px 100%;
-    pointer-events: none;
-}
-
-/* === FLICKER LAYER (halved) === */
-#crt::after {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(18, 16, 16, 0.05);
-    opacity: 0;
-    z-index: 100;
-    pointer-events: none;
-    animation: flicker 0.15s infinite;
-}
-
-/* === SOFT FLICKER ANIMATION === */
-@keyframes flicker {
-    0%   { opacity: 0.06; }
-    100% { opacity: 0.02; }
-}
-        </style>
-
-    <style>
-a:hover {
-color: #a1a1a1; 
--moz-transition: 0.7s ease-out;
--webkit-transition: 0.7s ease-out;}
-
-
-#content img:hover, #content a:hover img {
-background: url('') top center;
-opacity: 1;
-border-radius: 0.5px;
-border: 1px ridge rgba(205, 205, 205, 0.28);
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
--webkit-border-radius: 5px;
- }
-
-a.update:hover {
-color: #FFDBF0;
-text-align: center;
-border-left: 10px solid #F2C2DD;
-border-right: 10px solid #F2C2DD;
--o-transition-transition: all 0.5s ease-out;
--webkit-transition: all 0.5s ease-out; 
--moz-transition: all 0.5s ease-out;
-}
-
-
-</style>
-
         
-<script type="text/javascript">function showTime(){
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var session = "AM";
-    
-    if(h == 0){
-        h = 12;
-    }
-    
-    if(h > 12){
-        h = h - 12;
-        session = "PM";
-    }
-    
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-    
-    var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-    
-    setTimeout(showTime, 1000);
-    
-}
-
-showTime();</script> 
-
-        <!-- end of #container -->
-
-        <!-- CRT OVERLAY - MUST BE HERE -->
-        <div id="crt"></div>
-        <style>
-        	/* =============================================
-   STANDALONE CRT OVERLAY - GRUNGE EDITION
-   Halved darkness from the original you liked
-   (scanlines now 0.125 instead of 0.25, flicker layer 0.05 instead of 0.1)
-   Perfect subtle grunge without washing out your yellows/blues
-   ============================================= */
-
-#crt {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    pointer-events: none;
-}
-
-/* === SCANLINES + RGB SPLIT (halved) === */
-#crt::before {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: 
-        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.125) 50%), 
-        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    z-index: 100;
-    background-size: 100% 2px, 3px 100%;
-    pointer-events: none;
-}
-
-/* === FLICKER LAYER (halved) === */
-#crt::after {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(18, 16, 16, 0.05);
-    opacity: 0;
-    z-index: 100;
-    pointer-events: none;
-    animation: flicker 0.15s infinite;
-}
-
-/* === SOFT FLICKER ANIMATION === */
-@keyframes flicker {
-    0%   { opacity: 0.06; }
-    100% { opacity: 0.02; }
-}
-        </style>
-
-    <style>
-a:hover {
-color: #A1255A; 
--moz-transition: 0.7s ease-out;
--webkit-transition: 0.7s ease-out;}
-
-
-#content img:hover, #content a:hover img {
-background: url('') top center;
-opacity: 1;
-border-radius: 0.5px;
-border: 1px ridge rgba(205, 205, 205, 0.28);
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
--webkit-border-radius: 5px;
- }
-
-a.update:hover {
-color: #400C2A;
-text-align: center;
-border-left: 10px solid #F2C2DD;
-border-right: 10px solid #F2C2DD;
--o-transition-transition: all 0.5s ease-out;
--webkit-transition: all 0.5s ease-out; 
--moz-transition: all 0.5s ease-out;
-}
-
-
-</style>
-   
-   
-        <!-- CRT OVERLAY - MUST BE HERE -->
-        <div id="crt">
         <style>
         	/* =============================================
    STANDALONE CRT OVERLAY - GRUNGE EDITION
@@ -802,8 +564,7 @@ border-right: 10px solid #F2C2DD;
     100% { opacity: 0.02; }
 }
         </style>
-        </div>
-        
+
 <script type="text/javascript">
 // <![CDATA[
 var colours=new Array('#FF47ACFF', '#FF86C8FF', '#FFB4DDFF', '#FFD9EEFF', '#FF63B9A3', '#FF008CA3'); // colours of the hearts
@@ -981,27 +742,6 @@ function createDiv(height, width) {
 }
 // ]]>
 </script>
+        
 
-       
-  
-
-<div id="topbar">
-
-<style>
-#topbar {
-    z-index:flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 130px;
-    background-color: transparent;
-    background-image: url(https://serafae.neocities.org/images/backgrounds/pink/background_overlay/coquetteinhotpink.png);
-    background-size: contain;
-}
-</style>
-
-</div>
-
-         </body>
-         </html>
+</html>
