@@ -2,14 +2,12 @@
 <head>	
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1024">
     <title>[WIP] Serafae's Slumber • Blank Page</title>
         <link rel="icon" type="image/x-icon" href="https://serafae.neocities.org/favicon/favicon.ico">
         <link rel="stylesheet" href="https://serafae.neocities.org/css/hover.css" media="all">
         <link rel="stylesheet" href="https://serafae.neocities.org/css/scrollbar.css" media="all">
         <link rel="stylesheet" href="https://serafae.neocities.org/css/custom-cursor-trail/stars.css" media="all">
         
-                    <link rel="stylesheet" href="https://serafae.neocities.org/css/responsive.css" media="all">
                                         <link rel="stylesheet" href="https://serafae.neocities.org/css/fontfaces.css" media="all">
   </head>
   <body>
@@ -75,12 +73,12 @@
     flex-wrap: nowrap;
     width: max-content;
 
-    animation: blinkieScroll 8.0s linear infinite;
+    animation: blinkieScroll 10.0s linear infinite;
     will-change: transform;
 }
 
 #very-top .blinkie-bar:hover .blinkie-track {
-    animation-play-state: paused;
+    animation-play-state: infinite;
 }
 
 #very-top .blinkie {
@@ -187,20 +185,17 @@
         margin-bottom: 10px;
     }
 
-    #navbar .stamp-track {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
+#navbar .stamp-track {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
 
-        width: max-content;
+    width: max-content;
 
-        /*
-            Moves the stamps toward the LEFT.
-        */
-        animation: stampScroll 5s linear infinite;
+    animation: stampScroll 5s linear infinite reverse;
 
-        will-change: transform;
-    }
+    will-change: transform;
+}
 
     #navbar:hover .stamp-track {
         animation-play-state: paused;
