@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[WIP] 404 • Page Not Found</title>
+            <link rel="icon" type="image/x-icon" href="https://serafae.neocities.org/favicon/favicon.ico">
+        <link rel="stylesheet" href="https://serafae.neocities.org/css/hover.css" media="all">
+        <link rel="stylesheet" href="https://serafae.neocities.org/css/scrollbar.css" media="all">
+        
+            <style>
+* {
+  cursor: url('https://serafae.neocities.org/assets/misc-buttons/cursors/chrome-x-null.webp') 34 34, auto !important;
+}
+    </style>
+  
+  
+    <style>
+        /* . . . . . . . . . . . . . . . */ 
+    a{
+        color: #FF5CB6FF;
+        text-decoration:dotted underline;
+    }
+    a:hover{
+        color: #FFABD9FF;
+    }
+    
+    /* . . . . . . . . . . . . . . . */            
+
+    ::selection{ 
+        color:white;
+        background-color:#FF008C30;
+    }    
+
+    /* . . . . . . . . . . . . . . . */     
+    
+    
+    </style>
+    
+    
+                  <style>
+          a:hover {
+          color: #FFABD9FF; 
+          -moz-transition: 0.7s ease-out;
+          -webkit-transition: 0.7s ease-out;}
+          
+          
+          #content img:hover, #content a:hover img {
+          background: url('') top center;
+          opacity: 1;
+          border-radius: 0.5px;
+          border: 1px ridge rgba(205, 205, 205, 0.28);
+          -webkit-transition: all 0.8s ease-out;
+          -moz-transition: all 0.8s ease-out;
+          transition: all 0.8s ease-out;
+          -webkit-border-radius: 5px;
+           }
+          
+          a.update:hover {
+          color: #d2d2d2;
+          text-align: center;
+          border-left: 10px solid #aaa;
+          border-right: 10px solid #aaa;
+          -o-transition-transition: all 0.5s ease-out;
+          -webkit-transition: all 0.5s ease-out; 
+          -moz-transition: all 0.5s ease-out;
+          }
+          
+          
+          </style>  
+    
+    <style>
+  
+        @font-face {
+            font-family: 'Saint';
+            src: url('https://serafae.neocities.org/assets/fonts/fontfaces/Saint.otf') format('opentype');
+            font-display: swap;
+        }
+        
+                            @font-face {
+          font-family: 'New York';
+          src: url('https://serafae.neocities.org/assets/fonts/fontfaces/NewYork.otf') format('opentype');
+          font-display: swap;  /* This line is valid HERE */
+        }
+        
+        </style>
+        
+        <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://serafae.neocities.org/images/backgrounds/pink/up_spiderwebblackpinkbg.png') center/cover no-repeat fixed;
+            color: #FFEEF7;
+            font-family: 'Saint', 'Times New Roman', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;           /* ← No scrollbar */
+            text-align: center;
+        }
+        
+        
+
+        h1 {
+            font-family: 'Saint', sans-serif;
+            font-size: 120px;
+            margin: 0 0 15px 0;
+            letter-spacing: 6px;
+            color: #FFEEF7;
+            text-shadow: 0 0 10px
+            rgba(228, 0, 124, 0.95), 0 0 20px;
+                rgba(228, 0, 124, 0.6);
+        }
+
+        .message {
+            font-family: 'New York', sans-serif;
+            font-size: 30px;
+            margin: 20px 0 40px 0;
+            max-width: 600px;
+            opacity: 0.9;
+            line-height: 1.6;
+                        color: #FFEEF7;
+            text-shadow: 0 0 10px
+            rgba(228, 0, 124, 0.95), 0 0 20px;
+                rgba(228, 0, 124, 0.6);
+
+        }
+
+        a {
+            color: #FFEEF7;
+            text-decoration: none;
+            font-size: 22px;
+            padding: 12px 30px;
+            border: 2px ridge #FFBFEAC2;
+            background:#F377B94F;
+            border-radius: 6px;
+            transition: all 0.3s;
+            opacity: 0.90;
+            text-shadow: 0 0 10px
+            rgba(228, 0, 124, 0.95), 0 0 20px;
+                rgba(228, 0, 124, 0.6);
+        }
+
+        a:hover {
+            background: rgba(255,255,255,0.1);
+            transform: scale(1.05);
+        }
+
+        .small {
+            margin-top: 60px;
+            font-size: 16px;
+            opacity: 0.9;
+            
+            text-shadow: 0 0 10px
+            rgba(228, 0, 124, 0.95), 0 0 20px;
+                rgba(228, 0, 124, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <h1><i>404</i></h1>
+    
+    <div class="message">
+    <i>
+        Oops, still under construction!
+        <br>
+        This page has not yet been created.
+        </i>
+    </div>
+
+    <a href="main.html">
+    <strong>← Return to Serafae's Slumber</strong>
+    </a>
+
+    <div class="small">
+        <i>She still has yet to form this page...</i>
+    </div>
+    
+    
+            <!-- CRT OVERLAY - MUST BE HERE -->
+        <div id="crt"></div>
+        <style>
+        	/* =============================================
+   STANDALONE CRT OVERLAY - GRUNGE EDITION
+   Halved darkness from the original you liked
+   (scanlines now 0.125 instead of 0.25, flicker layer 0.05 instead of 0.1)
+   Perfect subtle grunge without washing out your yellows/blues
+   ============================================= */
+
+#crt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+/* === SCANLINES + RGB SPLIT (halved) === */
+#crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: 
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.125) 50%), 
+        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 100;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* === FLICKER LAYER (halved) === */
+#crt::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.05);
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+/* === SOFT FLICKER ANIMATION === */
+@keyframes flicker {
+    0%   { opacity: 0.06; }
+    100% { opacity: 0.02; }
+}
+        </style>
+        
+                                <style>
+                                
+                                        img.thumb,
+                                a.thumb:active img,
+                                a.thumb:link img,
+                                a.thumb:visited img {padding: 6px;
+                                background-image: url();
+                                background-color: #f0f0f0;
+                                background-position: top left;
+                                border: 1px solid #f5f5f5;
+                                margin: 2px;
+                                -webkit-border-radius: 5px;
+                                border-radius: 5px;
+                                }
+                        
+                                </style>
+
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array('#FF47ACFF', '#FF86C8FF', '#FFB4DDFF', '#FFD9EEFF', '#FF63B9A3', '#FF008CA3'); // colours of the hearts
+var minisize=16; // smallest size of hearts in pixels
+var maxisize=28; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(mwah);
+
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9734)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9734);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9734);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+
+</body>
+</html>
