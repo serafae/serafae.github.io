@@ -9,12 +9,107 @@
         <link rel="stylesheet" href="https://serafae.neocities.org/css/scrollbar.css" media="all">
         <link rel="stylesheet" href="https://serafae.neocities.org/css/custom-cursor-trail/stars.css" media="all">
         
+                    <link rel="stylesheet" href="https://serafae.neocities.org/css/responsive.css" media="all">
                                         <link rel="stylesheet" href="https://serafae.neocities.org/css/fontfaces.css" media="all">
   </head>
   <body>
       
        
-        <div id="container"><div id="topBar">You can put some text or images (or even a good old-fashioned marquee) up here!</div>
+        <div id="container">
+            <div style="width:100%; height: 40px; background-color: #13092D;" id="topBar">
+                <div id="very-top">
+
+    <div class="blinkie-bar">
+        <div class="blinkie-track">
+
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_prettyinpunk.gif" alt="blinkie" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_studbelt.gif" alt="blinkie" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_uncool.gif" alt="blinkie" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_stars.gif" alt="blinkie" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_kaomoji.gif" alt="blinkie" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_air_guitar.gif" alt="blinkie" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_angelwatch.gif" alt="blinkie" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hyper.gif" alt="blinkie" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hot.gif" alt="blinkie" class="blinkie">
+
+            <!-- Duplicate set for the seamless loop -->
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_prettyinpunk.gif" alt="" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_studbelt.gif" alt="" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_uncool.gif" alt="" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_stars.gif" alt="" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_kaomoji.gif" alt="" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_air_guitar.gif" alt="" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_angelwatch.gif" alt="" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hyper.gif" alt="" class="blinkie">
+            <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hot.gif" alt="" class="blinkie">
+
+        </div>
+    </div>
+                    
+                    <style>
+                        
+                        #very-top {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Blinkies scrolling across the very top */
+#very-top .blinkie-bar {
+    width: 100%;
+    height: 21px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: #13092D;
+
+    border-top: 3px solid #13092D;
+    border-bottom: 3px solid #13092D;
+}
+
+#very-top .blinkie-track {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: max-content;
+
+    animation: blinkieScroll 10.5s linear infinite;
+    will-change: transform;
+}
+
+#very-top .blinkie-bar:hover .blinkie-track {
+    animation-play-state: paused;
+}
+
+#very-top .blinkie {
+    width: 150px;
+    height: 20px;
+
+    object-fit: contain;
+
+    margin: 0 3px;
+    flex-shrink: 0;
+}
+
+#very-top .blinkie:hover {
+    transform: translateY(-2px) scale(1.04);
+    filter: brightness(1.5);
+}
+
+@keyframes blinkieScroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}</style>
+
+</div>
+            </div>
             <div id="headerArea">
                 <div id="header" style="height: 500px;"></div>
                 <nav id="navbar" style="margin-bottom: 10px;">
