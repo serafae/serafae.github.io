@@ -113,6 +113,7 @@
                 <div id="header" style="height: 500px;">
                 </div>
                 
+                
                 <nav style="padding: 0px; margin-top: 10px; width: 100%; height: 70px;" id="navbar" aria-label="Decorative stamp marquee">
 
     <div class="stamp-track">
@@ -139,6 +140,7 @@
              class="stamp">
 
         <!-- Duplicate set for seamless looping -->
+        
         <img style="height: 56px; padding: 0px;" src="https://vanessidial.neocities.org/the-doctor-called-me-special.png"
              alt=""
              class="stamp">
@@ -150,12 +152,12 @@
         <img src="https://vanessidial.neocities.org/the-doctor-called-me-special.png"
              alt=""
              class="stamp">
-
-        <img src="https://vanessidial.neocities.org/the-doctor-called-me-special.png"
+        
+                <img src="https://vanessidial.neocities.org/the-doctor-called-me-special.png"
              alt=""
              class="stamp">
-
-        <img src="https://vanessidial.neocities.org/the-doctor-called-me-special.png"
+        
+                <img src="https://vanessidial.neocities.org/the-doctor-called-me-special.png"
              alt=""
              class="stamp">
 
@@ -164,35 +166,26 @@
 </nav>
             </div>
 
-            <style>
-                
-                /* =====================================================
-       STAMP NAVIGATION
-       Decorative only — these are NOT links.
-       ===================================================== */
-
-    #navbar {
-        height: 66px;
-        background-color: #13092D;
-        width: 100%;
-        height: 100%;
-
-        overflow: hidden;
-
-        display: flex;
-        align-items: center;
-
-        margin-bottom: 10px;
-    }
-
-#navbar
-                .stamp-track {
+<style>
+#navbar {
+    height: 66px;
+    background-color: #13092D;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
-    width: max-content;
+    margin-bottom: 10px;
+}
 
-    animation: stampScroll 4s linear infinite reverse;
+#navbar
+    .stamp-track {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: max-content;
+        
+            animation: stampScroll 4.5s linear infinite;
     will-change: transform;
 }
 
@@ -200,39 +193,32 @@
     animation-play-state: paused;
 }
 
-    #navbar .stamp {
-        width: 99px;
-        height: 56px;
+#navbar .stamp {
+    width: 99px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin: 1 3px;
+    transition: transform 0.15s ease, filter 3s ease;
+}
 
-        object-fit: contain;
+#navbar .stamp:hover {
+    transform: translateY(0px) scale(1.0);
+    filter: brightness(1.5);
+}
 
-        flex-shrink: 0;
-
-        margin: 0 3px;
-
-        transition:
-            transform 0.15s ease,
-            filter 0.5s ease;
+/* scrolls to the RIGHT */
+@keyframes stampScroll {
+    from {
+        transform: translateX(-50%);
     }
 
-    /*
-        Same glow/hover idea as your blinkies.
-    */
-    #navbar .stamp:hover {
-        transform: translateY(-2px) scale(1.04);
-        filter: brightness(1.5);
+    to {
+        transform: translateX(0%);
     }
-
-    @keyframes stampScroll {
-        from {
-            transform: translate3d(0, 0, 0);
-        }
-
-        to {
-            transform: translate3d(-50%, 0, 0);
-        }
-    }
-            </style>
+}
+</style>
+            
             <div id="flex">
                 <aside id="leftSidebar" style="margin-right: 10px;">
                     <h2>Updates</h2>
@@ -411,9 +397,7 @@
                 /* navbar color */
                 width: 100%;
                 
-                #navbar li a:hover {
-    ...
-}
+                #navbar li a:hover {}
             }
             
             
