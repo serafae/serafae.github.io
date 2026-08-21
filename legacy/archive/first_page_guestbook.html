@@ -1,0 +1,1014 @@
+<html lang="en">
+<head>	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+    <title>[WIP] Serafae's Slumber • Guestbook</title>
+        <link rel="icon" type="image/x-icon" href="https://serafae.neocities.org/favicon/favicon.ico">
+        <link rel="stylesheet" href="https://serafae.neocities.org/css/hover.css" media="all">
+        <link rel="stylesheet" href="https://serafae.neocities.org/css/scrollbar.css" media="all">
+        <link rel="stylesheet" href="https://serafae.neocities.org/css/custom-cursor-trail/stars.css" media="all">
+        
+        
+                    <link rel="stylesheet" href="https://serafae.neocities.org/css/responsive.css" media="all">
+                            <link rel="stylesheet" href="https://serafae.neocities.org/css/fontfaces.css" media="all">
+                    
+        
+            <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+            <link rel="shortcut icon" href="/">
+            <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">    
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+            
+                    <audio autoplay loop preload="auto">
+              <source src="https://file.garden/aZltaMv4vGLII4sT/BGM/NC/TRACKS/I_STILL_THINK_ABOUT_YOU.mp3" type="audio/mpeg">
+            </audio>
+
+            
+    <style>
+* {
+  cursor: url('https://serafae.neocities.org/assets/misc-buttons/cursors/chrome-pointer-main.webp') 34 34, auto !important;
+}
+    </style>
+            
+                      
+                      <style> /* Padding at the top and bottom to keep the page centered and even */
+                  body {
+                    margin: 0;
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                  }
+                </style>
+
+
+    <style type="text/css">
+    
+    body {
+    overflow-y: hidden;                /* you already have this – keeps vertical scroll off if desired */
+    overflow-x: hidden;
+    
+    
+    
+    font-family: 'New York', serif;
+    color: #3d3d3d;
+    font-size: 17.5px;
+    
+    
+    /* New fixed full-page background setup */
+    background-image: url('https://serafae.neocities.org/images/backgrounds/pink/bg01pinkdecorum.png');
+    background-repeat: no-repeat;      /* stops tiling */
+    background-position: center center;/* centers the image */
+    background-size: cover;            /* scales to cover entire viewport, crops if needed to avoid distortion */
+    background-attachment: fixed;      /* key: image stays fixed in place, doesn't scroll with content */
+    min-height: 100vh;                 /* ensures body covers full viewport height */
+}   
+
+    /* . . . . . . . . . . . . . . . */ 
+    a{
+        color: #836776FF;
+        text-decoration:dotted underline;
+    }
+    a:hover{
+        color: #F8A8D4DB;
+    }
+    
+    /* . . . . . . . . . . . . . . . */            
+
+    ::selection{ 
+        color: #210013FF;
+        background-color: #FD9BD16E;
+    }    
+
+    /* . . . . . . . . . . . . . . . */                
+
+
+    @font-face {
+  font-family: 'New York';
+  src: url('https://serafae.neocities.org/assets/fonts/fontfaces/NewYork.otf') format('opentype');
+  font-display: swap;  /* This line is valid HERE */
+}
+        
+        
+
+    
+    /*********************************
+    
+            Container + Header 
+    
+    *********************************/    
+    
+    #container{
+        width:805px;
+        height:580px;
+        margin-top:10px;
+        position:absolute;
+        left: 50%;
+        z-index:1;
+        background:white;
+        transform: translateX(-50%);
+        border:5px white ridge;
+    }    
+    
+    /* . . . . . . . . . . . . . . . */  
+    
+    #header-content-container{
+        float:right;
+        width:600px;
+        border-top:none;
+        border-right:none;
+        border-bottom:3px white ridge;
+        border-left:5px white ridge;
+        height:100%;
+    }
+    
+    /* . . . . . . . . . . . . . . . */  
+    
+    #header{
+        width:100%;
+        height:160px;
+        object-fit: fill;
+    }
+
+    /* . . . . . . . . . . . . . . . */  
+    
+    #sidebar{
+        float:left;
+        width:197px;
+        position:absolute;
+        height:100%;        
+    }
+    
+
+    /*********************************
+        
+                Content
+    
+    *********************************/
+    
+    #wrapper{
+        float:left;
+        overflow-y:flex;
+        overflow-x:flex;
+        width:100%;
+        height:413px;
+        margin-top:5px;
+    }
+    
+    #main{
+        border:0px white none;
+        width:600px;
+        margin-left:-10px;
+        height:345px;
+        padding:10px;
+        margin-top:5px;
+    }
+
+
+    </style>
+    </head>
+    
+    
+    <body>
+    
+        <div id="container">
+            <div id="header-content-container">
+                <div id="header" style="background-position: 20% 80%; 
+        background-image:url('https://serafae.neocities.org/assets/headers/header_frutigermetro_dark_pink.png');">
+                    <div style="height:123px;padding:5px;background: linear-gradient(to right, #23000f 25%, transparent);width:100%;">
+                        <div style="border-radius:10px;
+            position:absolute;
+            margin-top:5px;
+            background-image:url('https://serafae.neocities.org/assets/personal+icons/frutiger/metro_66_pink.png');
+            background-size: 50% 145px;          /* ← 100% width + adjusted fixed height to show more without cropping too much */
+            background-repeat: no-repeat;
+            background-position: center;          /* keeps graphic centered horizontally */
+            z-index:1;
+            margin-left: 15px;
+            height: 123px;                        /* ← match the background-size height exactly so no overflow/clipping issues */
+            width: calc(100% - 20px);             /* ← fills available space minus margins, prevents wrapper squeeze */
+            ">
+                            <div style="margin-left:3.5px;">
+      <a data-toggle="tooltip" title="Refresh?" href="/" style="
+              text-shadow: 1px 1px 4px #E4007C,
+              0 0 0.8em #db5e98,
+              0 0 1.2em #db5e98,
+              0 0 1.6em #db5e98,
+              0 0 2em #db5e98;
+              0 0 2.5em #db5e98,
+              0 0 3em rgba(228, 0, 124, 0.9);
+              color: white;
+              font-size: 45px;
+              font-family: Saint;
+              text-decoration: none;
+              font-weight: bold;
+              font-style: italic;">
+              If the dream was real,
+          </a>
+</div>
+                            
+                            <div style="margin-left: 5.3px; margin-top:1px;">
+      <a data-toggle="tooltip" title="Refresh?" href="/" style="
+              text-shadow: 
+                  1px 1px 4px #E4007C, 
+                  0 0 1em #db5e98, 
+                  0 0 1.5em #db5e98, 
+                  0 0 2em #db5e98, 
+                  0 0 2.5em #db5e98, 
+                  0 0 3em rgba(228, 0, 124, 0.9);
+              color: white;
+              font-size: 37px;
+              font-family: Saint;
+              text-decoration: none;
+              font-style: italic;">
+              ...would you still follow me?
+          </a>
+</div>
+                        </div>
+                    </div>
+                    <div>
+                    
+                    <style>
+                        .blinkie-bar{
+    width:600px;
+    height:27px;
+
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+
+    background:#fff;
+    border-top:3px ridge #fff;
+    border-bottom:3px ridge #fff;
+}
+
+.blinkie-track{
+    display:flex;
+    align-items:center;
+    flex-wrap:nowrap;
+    width:max-content;
+
+    animation:blinkieScroll 10.5s linear infinite;
+    will-change:transform;
+}
+
+.blinkie-bar:hover .blinkie-track{
+    animation-play-state:paused;
+}
+
+.blinkie{
+    width:150px;      /* or whatever fits */
+    height:20px;
+    object-fit:contain;
+    margin:0 3px;
+    flex-shrink:0;
+}
+
+.blinkie:hover{
+    transform:translateY(-2px) scale(1.04);
+    filter:brightness(1.5);
+}
+
+@keyframes blinkieScroll{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-50%,0,0);
+    }
+}
+                    </style>
+                        
+                    </div>
+                    
+<div class="blinkie-bar">
+    <div class="blinkie-track">
+
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_prettyinpunk.gif" alt="blinkie9" class="blinkie">
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_studbelt.gif" alt="blinkie1" class="blinkie">
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_uncool.gif" alt="blinkie2" class="blinkie">
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_stars.gif" alt="blinkie3" class="blinkie">
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_kaomoji.gif" alt="blinkie4" class="blinkie">
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_air_guitar.gif" alt="blinkie5" class="blinkie">
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_angelwatch.gif" alt="blinkie6" class="blinkie">
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hyper.gif" alt="blinkie7" class="blinkie">
+        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hot.gif" alt="blinkie8" class="blinkie">
+        
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_prettyinpunk.gif" alt="blinkie9" class="blinkie">
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_studbelt.gif" alt="blinkie1" class="blinkie">
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_uncool.gif" alt="blinkie2" class="blinkie">
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_stars.gif" alt="blinkie3" class="blinkie">
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_kaomoji.gif" alt="blinkie4" class="blinkie">
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_air_guitar.gif" alt="blinkie5" class="blinkie">
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_angelwatch.gif" alt="blinkie6" class="blinkie">
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hyper.gif" alt="blinkie7" class="blinkie">
+                        <img src="https://serafae.neocities.org/images/gifs/blinkies/pink/mexrose_hot.gif" alt="blinkie8" class="blinkie">
+        
+    </div>
+</div>
+                    
+                </div>
+                
+                <div id="wrapper">
+                    <div id="main">
+                        <table>
+                            <tbody>
+                                <tr>
+                                                            <div>
+                                        <div class="guestbook-frame">
+                                                    <iframe 
+                                                        src="https://serafae.neocities.org/pages/splash/guestbook" 
+                                                        title="Serafae's Guestbook: Rules & Guidelines (Splash Cover)"
+                                                        scrolling="yes"
+                                                        frameborder="0"
+                                                        allowfullscreen>
+                                                    </iframe>
+                                        </div>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>   
+
+<style>
+.guestbook-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Try to apply your scrollbar inside the iframe */
+.guestbook-frame iframe::-webkit-scrollbar {
+    width: 0px;
+}
+.guestbook-frame iframe::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0px;
+}
+</style>
+
+<style>
+
+.guestbook-frame {
+    width: 553px;
+    height: 373px;
+    margin: 0 auto;
+    border: 7px solid #434343;
+    border-image: url('https://serafae.neocities.org/assets/personal+icons/icons/dark_raspberry_decor-blob.png') 6 fill round;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0 0 12px whitesmoke;
+}
+
+.guestbook-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+</style>
+            
+                <style>
+@font-face {
+  font-family: 'Saint';
+  src: url('https://serafae.neocities.org/assets/fonts/fontfaces/Saint.otf') format('opentype');
+  font-display: swap;  /* This line is valid HERE */
+}
+</style>
+            
+                        <div id="sidebar">
+                        
+<div style="background: linear-gradient(to bottom, rgb(3, 3, 3) 15%, rgb(56, 56, 56));
+            border:2px ridge white;
+            border-top:none;
+            text-align:center;
+            color:white;
+            font-weight:bold;
+            font-size:21px;
+            width:202px;
+            border-right:none;
+            border-left:none;">
+            
+    <div id="calendarBox">
+    <iframe src="https://serafae.neocities.org/pages/widgets/calendar.html" scrolling="no"></iframe>
+        
+</div>
+    <style>
+        #calendarBox {
+    width: 202px;
+    height: 202px;              /* make it a true square */
+    padding: 0;
+    box-sizing: border-box;
+
+    border: 2px ridge white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    background: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#calendarBox iframe {
+    width: 260px;
+    height: 260px;
+    border: none;
+
+    transform: scale(0.77);     /* 202 / 260 ≈ 0.77 */
+    transform-origin: center;
+}</style>
+</div>
+            
+                
+                
+<div style="background: linear-gradient(0deg, rgba(199, 72, 133, 1) 0%,rgba(109, 33, 70, 1) 22%,rgba(36, 0, 21, 255) 55%);
+            border:2px ridge white;
+            border-top:none;
+            text-align:center;
+            color:whitesmoke;
+            font-weight:bold;
+            font-size:21px;
+            width:202px;
+            border-right:none;
+            border-left:none;">
+    <div style="font-family:Saint;
+                letter-spacing:.5px;
+                text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;">Navigation</div>
+</div>            
+                <div style="padding:5px;">
+                    <div style="background:#fff2fa"><a href="/main.html">Main</a></div>
+                    <a href="https://serafae.neocities.org/pages/about_me">About Me</a>
+                    <div style="background:#fff2fa"><a href="https://serafae.neocities.org/pages/splash/guestbook.html">Guestbook</a></div>
+                    <a href="/webmastery.html">Webmastery</a>
+                </div>
+                
+<div style="background: linear-gradient(0deg, rgba(199, 72, 133, 1) 0%,rgba(109, 33, 70, 1) 22%,rgba(36, 0, 21, 255) 55%);
+            border:2px ridge white;
+            border-top:none;
+            text-align:center;
+            color:whitesmoke;
+            font-weight:bold;
+            font-size:21px;
+            width:202px;
+            border-right:none;
+            border-left:none;">
+    <div style="font-family:Saint;
+                letter-spacing:.5px;
+                text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;">
+        Works
+    </div>
+</div>            
+                <div style="padding:5px;">
+                    <div style="background:#fff2fa"><a href="/art.html">Art</a></div>
+                    <a href="https://serafae.neocities.org/pages/splash/diary.html">Diary</a>
+                    <div style="background:#fff2fa"><a href="/lyrics.html">Lyrics</a></div>
+                    <a href="/projects.html">Projects</a>
+                    <div style="background:#fff2fa"><a href="/shrines.html">Shrines</a></div>
+                </div>
+                
+<div style="background: linear-gradient(0deg, rgba(199, 72, 133, 1) 0%,rgba(109, 33, 70, 1) 22%,rgba(36, 0, 21, 255) 55%);
+            border:2px ridge white;
+            border-top:none;
+            text-align:center;
+            color:whitesmoke;
+            font-weight:bold;
+            font-size:21px;
+            width:202px;
+            border-right:none;
+            border-left:none;">
+    <div style="font-family:Saint;
+                letter-spacing:.5px;
+                text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;">
+        Resources
+    </div>
+</div>            
+                <div style="padding:5px;">
+                    <div style="background:#fff2fa"><a href="sitemap.html">Sitemap</a></div>
+                    <a href="acknowledgments.html">Acknowledgments</a>
+                    <div style="background:#fff2fa"><a href="terms-of-service.html">Terms &amp; Conditions</a></div>
+        
+                
+</div>            
+                <div style="padding:5px;">
+                    <div style="background:#fff2fa"></div>
+                    </div>
+            </div>
+            
+        </div>
+        
+<script type="text/javascript">function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+</script> 
+
+        <!-- end of #container -->
+
+        <!-- CRT OVERLAY - MUST BE HERE -->
+        <div id="crt">
+        </div>
+        <style>
+        	/* =============================================
+   STANDALONE CRT OVERLAY - GRUNGE EDITION
+   Halved darkness from the original
+   (scanlines now 0.125 instead of 0.25, flicker layer 0.05 instead of 0.1)
+   Perfect subtle grunge without washing out your yellows/blues
+   ============================================= */
+
+#crt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+/* === SCANLINES + RGB SPLIT (halved) === */
+#crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: 
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.125) 50%), 
+        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 100;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* === FLICKER LAYER (halved) === */
+#crt::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.05);
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+/* === SOFT FLICKER ANIMATION === */
+@keyframes flicker {
+    0%   { opacity: 0.06; }
+    100% { opacity: 0.02; }
+}
+        </style>
+
+    <style>
+a:hover {
+color: #a1a1a1; 
+-moz-transition: 0.7s ease-out;
+-webkit-transition: 0.7s ease-out;}
+
+
+#content img:hover, #content a:hover img {
+background: url('') top center;
+opacity: 1;
+border-radius: 0.5px;
+border: 1px ridge rgba(205, 205, 205, 0.28);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+-webkit-border-radius: 5px;
+ }
+
+a.update:hover {
+color: #FFDBF0;
+text-align: center;
+border-left: 10px solid #F2C2DD;
+border-right: 10px solid #F2C2DD;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out; 
+-moz-transition: all 0.5s ease-out;
+}
+
+
+</style>
+
+        
+<script type="text/javascript">function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();</script> 
+
+        <!-- end of #container -->
+
+        <!-- CRT OVERLAY - MUST BE HERE -->
+        <div id="crt"></div>
+        <style>
+        	/* =============================================
+   STANDALONE CRT OVERLAY - GRUNGE EDITION
+   Halved darkness from the original you liked
+   (scanlines now 0.125 instead of 0.25, flicker layer 0.05 instead of 0.1)
+   Perfect subtle grunge without washing out your yellows/blues
+   ============================================= */
+
+#crt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+/* === SCANLINES + RGB SPLIT (halved) === */
+#crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: 
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.125) 50%), 
+        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 100;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* === FLICKER LAYER (halved) === */
+#crt::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.05);
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+/* === SOFT FLICKER ANIMATION === */
+@keyframes flicker {
+    0%   { opacity: 0.06; }
+    100% { opacity: 0.02; }
+}
+        </style>
+
+    <style>
+a:hover {
+color: #A1255A; 
+-moz-transition: 0.7s ease-out;
+-webkit-transition: 0.7s ease-out;}
+
+
+#content img:hover, #content a:hover img {
+background: url('') top center;
+opacity: 1;
+border-radius: 0.5px;
+border: 1px ridge rgba(205, 205, 205, 0.28);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+-webkit-border-radius: 5px;
+ }
+
+a.update:hover {
+color: #400C2A;
+text-align: center;
+border-left: 10px solid #F2C2DD;
+border-right: 10px solid #F2C2DD;
+-o-transition-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out; 
+-moz-transition: all 0.5s ease-out;
+}
+
+
+</style>
+   
+   
+        <!-- CRT OVERLAY - MUST BE HERE -->
+        <div id="crt">
+        <style>
+        	/* =============================================
+   STANDALONE CRT OVERLAY - GRUNGE EDITION
+   Halved darkness from the original serafae liked
+   (scanlines now 0.125 instead of 0.25, flicker layer 0.05 instead of 0.1)
+   Perfect subtle grunge without washing out yellows/blues
+   ============================================= */
+
+#crt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+/* === SCANLINES + RGB SPLIT (halved) === */
+#crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: 
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.125) 50%), 
+        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 100;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* === FLICKER LAYER (halved) === */
+#crt::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.05);
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+/* === SOFT FLICKER ANIMATION === */
+@keyframes flicker {
+    0%   { opacity: 0.06; }
+    100% { opacity: 0.02; }
+}
+        </style>
+        </div>
+        
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array('#FF47ACFF', '#FF86C8FF', '#FFB4DDFF', '#FFD9EEFF', '#FF63B9A3', '#FF008CA3'); // colours of the hearts
+var minisize=16; // smallest size of hearts in pixels
+var maxisize=28; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(mwah);
+
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9734)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9734);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9734);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+
+       
+  
+
+<div id="topbar">
+
+<style>
+#topbar {
+    z-index:flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    background-color: transparent;
+    background-image: url(https://serafae.neocities.org/images/backgrounds/pink/background_overlay/coquetteinhotpink.png);
+    background-size: contain;
+}
+</style>
+
+</div>
+
+         </body>
+         </html>
