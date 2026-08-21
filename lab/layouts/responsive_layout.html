@@ -56,7 +56,7 @@
 /* Blinkies scrolling across the very top */
 #very-top .blinkie-bar {
     width: 100%;
-    height: 21px;
+    height: 100%;
 
     overflow: hidden;
 
@@ -65,8 +65,8 @@
 
     background: #13092D;
 
-    border-top: 3px solid #13092D;
-    border-bottom: 3px solid #13092D;
+    border-top: 0px solid #13092D;
+    border-bottom: 0px solid #13092D;
 }
 
 #very-top .blinkie-track {
@@ -75,7 +75,7 @@
     flex-wrap: nowrap;
     width: max-content;
 
-    animation: blinkieScroll 10.5s linear infinite;
+    animation: blinkieScroll 8.0s linear infinite;
     will-change: transform;
 }
 
@@ -94,7 +94,7 @@
 }
 
 #very-top .blinkie:hover {
-    transform: translateY(-2px) scale(1.04);
+    transform: translateY(-2px) scale(0.95);
     filter: brightness(1.5);
 }
 
@@ -106,7 +106,8 @@
     to {
         transform: translate3d(-50%, 0, 0);
     }
-}</style>
+}
+                    </style>
 
 </div>
             </div>
