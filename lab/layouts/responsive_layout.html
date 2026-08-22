@@ -216,26 +216,16 @@
             </div>
 
 <style>
-#navbar {
-    height: 66px;
-    background-color: #13092D;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+#navbar .stamp-track {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-}
+    flex-wrap: nowrap;
 
-#navbar
-    .stamp-track {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        width: auto;
-        height: auto;
-        
-            animation: stampScroll 15s linear infinite;
+    width: max-content;
+    height: 56px;
+
+    animation: stampScroll 30s linear infinite;
+
     will-change: transform;
 }
 
@@ -246,26 +236,32 @@
 #navbar .stamp {
     width: 99px;
     height: 56px;
+
     object-fit: contain;
+
     flex-shrink: 0;
-    margin: 1 3px;
-    transition: transform 5s ease, filter 3s ease;
+
+    margin: 1px 3px;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.5s ease;
 }
 
 #navbar .stamp:hover {
-    transform: translateY(0px) scale(1.0);
+    transform: scale(1.04);
     filter: brightness(1.5);
 }
 
-/* scrolls to the RIGHT */
 @keyframes stampScroll {
     from {
         transform: translateX(-50%);
     }
 
     to {
-        transform: translateX(0%);
+        transform: translateX(0);
     }
+}
 </style>
             
             <div id="flex">
