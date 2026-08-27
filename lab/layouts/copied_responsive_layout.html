@@ -14,39 +14,57 @@
                                         <script src="https://u.widget.st/ar.js"></script>
                                         
                                         <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
-                                        
-                                                              <script>
-                                                                document.addEventListener('mousemove', function(e) {
-                                                                        const cursor = document.getElementById('animated-cursor');
-                                                                        cursor.style.left = e.pageX + 'px';
-                                                                        cursor.style.top = e.pageY + 'px';
+
+
+                                                    <script>
+                                                        document.addEventListener('mousemove', function(e) {
+                                                          const cursor = document.getElementById('animated-cursor');
+                                                          cursor.style.left = e.pageX + 'px';
+                                                          cursor.style.top = e.pageY + 'px';
+                                                        });
+                                                            </script>
+
+                                                                  <script>
+                                                                      document.addEventListener("mouseover", function(e) {
+                                                                        if (e.target.closest("a")) {
+                                                                          document.getElementById("animated-cursor").style.opacity = "0";
+                                                                        }
                                                                       });
-                                                                          </script>
-                                                                                        
+                                                                      
+                                                                      document.addEventListener("mouseout", function(e) {
+                                                                        if (e.target.closest("a")) {
+                                                                          document.getElementById("animated-cursor").style.opacity = "1";
+                                                                        }
+                                                                      });
+                                                                                  </script>
+
   </head>
 
-                            <div id="animated-cursor"></div>
+        <div id="animated-cursor">
+            </div>
+                      <style>
+                            body {
+                              cursor: none !important;
+                            }
                             
-                                          <style>
-                                          /* Hide the real cursor */
-                                    body {
-                                      cursor: none !important;
-                                    }
-                                    
-                                    /* Animated cursor element */
-                                    #animated-cursor {
-                                      width: 64px;
-                                      height: 64px;
-                                      position: absolute; /* FIXED → ABSOLUTE */
-                                      pointer-events: none;
-                                      transform: translate(-50%, -50%);
-                                      background-image: url('https://serafae.neocities.org/assets/misc-buttons/cursors/butterfly_in_blue.webp');
-                                      background-size: contain;
-                                      background-repeat: no-repeat;
-                                      z-index: 999999; /* stays above stamps, blinkies, gifs */
-                                    }
-                                    
-                                          </style>
+                            a, a:hover, a:focus {
+                              cursor: none !important;
+                            }                      
+                            
+                                  #animated-cursor {
+                                    width: 64px;
+                                    height: 64px;
+                                    position: absolute;
+                                    pointer-events: none;
+                                    transform: translate(-50%, -50%);
+                                    background-image: url('https://serafae.neocities.org/assets/misc-buttons/cursors/butterfly_in_blue.webp');
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    z-index: 999999;
+                                    transition: opacity 0.28s ease;
+                                  }
+                                  
+                                        </style>
        
         <div id="container">
         
