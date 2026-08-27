@@ -290,33 +290,103 @@
                           
                           <!-- 💖 Site Button -->
                           <div class="widget site-button" style="text-align:center; height: 335px; margin: 0px;">
-                            <small><b style="color: rgb(226, 106, 162);">★ Link Me! ★</b></small>
-                            <br><br/>
-                            <img src="https://serafae.neocities.org/assets/personal+icons/icons/SFS_Site_Button_(88x31).gif" alt="Site Button" width="88" height="31">
-                            <br>
-                            <br/>
+                  <div class="sfs-link-button">
+  <small>
+    <b class="sfs-wobble" style="color: rgb(226, 106, 162);">
+      🔗
+    </b>
+  </small>
+
+<a href="https://serafae.neocities.org/assets/personal+icons/icons/SFS_Site_Button_(88x31).gif">
+  <img
+    class="sfs-site-button"
+    src="https://serafae.neocities.org/assets/personal+icons/icons/SFS_Site_Button_(88x31).gif"
+    alt="Site Button"
+    width="88"
+    height="31"
+  >
+  </a>
+</div>
+
+<style>
+.sfs-link-button {
+  text-align: center;
+  line-height: 1;
+}
+
+.sfs-wobble {
+  display: inline-block;
+  animation: sfsWobble 4s ease-in-out infinite;
+}
+
+@keyframes sfsWobble {
+  0% {
+    transform: translateY(1px) skewX(2deg);
+  }
+
+  25% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(1px) skewX(-2deg);
+  }
+
+  75% {
+    transform: translateY(-1px);
+  }
+
+  100% {
+    transform: translateY(1px) skewX(2deg);
+  }
+}
+
+.sfs-site-button {
+  display: block;
+  width: 88px;
+  height: 31px;
+  margin: 5px auto 0;
+  animation: sfsFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes sfsFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+</style>
+
+<br>
                             
                             <textarea readonly style="width: 160px; height: 259px; resize: none;">
                         <a href="https://serafae.neocities.org/" target="_blank">
                         
-                          <img src="https://serafae.neocities.org/assets/personal+icons/icons/SFS_Site_Button_(88x31).gif"
+                          <img src="link_here.gif"
                                alt="SERAFAE'S SLUMBER"
                                width="88"
                                height="31">
                         </a>
                             </textarea>
-                            <br>
+
+
                           </div>
-                        
-                        <br>
+                                
+
                         
                           <!-- 🔢 Hit Counter -->
                           <div class="widget hit-counter" style="text-align:left;">
                             <ws-widget style="margin: 0px;" type="hc" iid="5382"></ws-widget>
                           </div>
-                          
                           <br>
-                            <br/>
+
                             
                               <a href="https://grrrl.valentinely.cc/">
                               <img style="margin: 0px;" src="https://serafae.neocities.org/images/icons/madebya-pink.png" alt="Made By A Girl (Badge)" width="72" height="51">
@@ -651,7 +721,7 @@ body {
                         border-image-source: url("https://itinerae.neocities.org/borders/lace/black.webp");
                         border-image-slice: 5;
                         border-image-repeat: round;
-                        border-image-width: 6px;
+                        border-image-width: 4.5px;
                     }
 
             
@@ -679,7 +749,7 @@ body {
                     border-image-source: url("https://itinerae.neocities.org/borders/lace/black.webp");
                     border-image-slice: 5;
                     border-image-repeat: round;
-                    border-image-width: 6px;
+                    border-image-width: 4.5px;
                 }
 
 
