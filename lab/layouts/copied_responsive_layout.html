@@ -12,14 +12,47 @@
                                         <link rel="stylesheet" href="https://serafae.neocities.org/css/fontfaces.css" media="all">
                                         
                                         <script src="https://u.widget.st/ar.js"></script>
+                                        
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+                                        
+                                                              <script>
+                                                                document.addEventListener('mousemove', function(e) {
+                                                                        const cursor = document.getElementById('animated-cursor');
+                                                                        cursor.style.left = e.pageX + 'px';
+                                                                        cursor.style.top = e.pageY + 'px';
+                                                                      });
+                                                                          </script>
+                                                                                        
   </head>
 
+                            <div id="animated-cursor"></div>
+                            
+                                          <style>
+                                          /* Hide the real cursor */
+                                    body {
+                                      cursor: none !important;
+                                    }
+                                    
+                                    /* Animated cursor element */
+                                    #animated-cursor {
+                                      width: 64px;
+                                      height: 64px;
+                                      position: absolute; /* FIXED → ABSOLUTE */
+                                      pointer-events: none;
+                                      transform: translate(-50%, -50%);
+                                      background-image: url('https://serafae.neocities.org/assets/misc-buttons/cursors/butterfly_in_blue.webp');
+                                      background-size: contain;
+                                      background-repeat: no-repeat;
+                                      z-index: 999999; /* stays above stamps, blinkies, gifs */
+                                    }
+                                    
+                                          </style>
        
         <div id="container">
         
             <div style="width:100%;
                         height: 50px;
-                        background-color: #d6e4f2;
+                        background-color: #f2f2f2;
                         margin: auto;
                         margin-top: 10px;
                         margin-bottom: 10px;"
@@ -27,26 +60,26 @@
                         id="topBar">
                         
                <div class="blinkie-track">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/rainbow_angel.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/Ushana.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/eternal_sailor_moon_blinkie.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/princessserenityblinkie.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/electric_angel.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/butterflyonyourshouldervocaloid.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/fallen_angel.gif">
+
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/ushana.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/eternal_sailor_moon_blinkie.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/princessserenityblinkie.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/electric_angel.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/butterflyonyourshouldervocaloid.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/fallen_angel.gif">
                     
                               </div>
 
                   
                   
                <div class="blinkie-track">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/rainbow_angel.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/Ushana.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/eternal_sailor_moon_blinkie.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/princessserenityblinkie.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/electric_angel.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/butterflyonyourshouldervocaloid.gif">
-                      <img class="blinkie" src="https://vanessidial.neocities.org/fallen_angel.gif">
+               
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/ushana.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/eternal_sailor_moon_blinkie.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/princessserenityblinkie.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/electric_angel.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/butterflyonyourshouldervocaloid.gif">
+                      <img class="blinkie" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/fallen_angel.gif">
                     
                               </div>
 
@@ -65,7 +98,7 @@
                             "padding: 1px;
                             margin-top: 10px;
                             width: 100%;
-                            height: 70px;
+                            height: 90px;
                              background-color: #d6e4ed;">
 
     <div class="stamp-track">
@@ -73,6 +106,7 @@
     <!-- SET 1 — your original stamps -->
     <div style="height: 56px; margin: 0px;" class="stamp-set">
                 <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/i-ate-your-cellphone.png" alt="I ate your cellphone" class="stamp">
+                        <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/kurt-cobain-stamp1.gif" alt="Kurt Cobain from Nirvana (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Indie_Band_Joke_Stamp_1.gif" alt="Indie Band Joke (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Budgerigar_Stamp_2.png" alt="I Love My Budgies (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Budgerigar_Stamp_1.png" alt="I Love My Budgies (Stamp 2)" class="stamp">
@@ -87,8 +121,6 @@
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Kindness_Stamp_1.gif" alt="Kindness is not a form of weakness (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Miscommunication_Stamp_2.gif" alt="Just because I have manners (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Miscommunication_Stamp_1.gif" alt="10 Reasons of Miscommunication (Stamp 1)" class="stamp">
-                <img style="height: 56px; padding: 0px;" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/let-me-love-you-stamp.gif" alt="Let me love you to death (Stamp 1)" class="stamp">
-        <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/kurt-cobain-stamp1.gif" alt="Kurt Cobain from Nirvana (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Winx_Club_Logo_Stamp_1.png" alt="Winx Club Trademark" class="stamp">
             <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Bloom_Fan_(Winx)_Stamp.gif" alt="Bloom Fan" class="stamp">
             <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Stella_Fan_(Winx)_Stamp.gif" alt="Stella Fan" class="stamp">
@@ -105,13 +137,14 @@
                 <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/ilovestrawberries.png" alt="I love strawberries" class="stamp">
                 <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/pink-adhd-stamp.png" alt="ADHD" class="stamp">
                     <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/moon-crescent-stamp.png" alt="Crescent Moon" class="stamp">
-                    <img src="https://vanessidial.neocities.org/stopusingautismasaninsult.gif" alt="Autism Acceptance" class="stamp">
+                    <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/stopusingautismasaninsult.gif" alt="Stop Using 'Autistic' As An Insult" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/autismacceptence.png" alt="Autism Acceptance" class="stamp">
     </div>
 
     <!-- SET 2 — exact duplicate for seamless looping -->
     <div class="stamp-set">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/i-ate-your-cellphone.png" alt="I ate your cellphone" class="stamp">
+                <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/kurt-cobain-stamp1.gif" alt="Kurt Cobain from Nirvana (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Indie_Band_Joke_Stamp_1.gif" alt="Indie Band Joke (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Budgerigar_Stamp_2.png" alt="I Love My Budgies (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Budgerigar_Stamp_1.png" alt="I Love My Budgies (Stamp 2)" class="stamp">
@@ -126,8 +159,6 @@
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Kindness_Stamp_1.gif" alt="Kindness is not a form of weakness (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Miscommunication_Stamp_2.gif" alt="Just because I have manners (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Miscommunication_Stamp_1.gif" alt="10 Reasons of Miscommunication (Stamp 1)" class="stamp">
-                <img style="height: 56px; padding: 0px;" src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/let-me-love-you-stamp.gif" alt="Let me love you to death (Stamp 1)" class="stamp">
-        <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/kurt-cobain-stamp1.gif" alt="Kurt Cobain from Nirvana (Stamp 1)" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/friendsarmy.png" alt="Personal Army" class="stamp">
         <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Winx_Club_Logo_Stamp_1.png" alt="Winx Club Trademark" class="stamp">
             <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/Bloom_Fan_(Winx)_Stamp.gif" alt="Bloom Fan" class="stamp">
@@ -145,7 +176,7 @@
                 <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/ilovestrawberries.png" alt="I love strawberries" class="stamp">
                 <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/pink-adhd-stamp.png" alt="ADHD" class="stamp">
                     <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/moon-crescent-stamp.png" alt="Crescent Moon" class="stamp">
-        <img src="https://vanessidial.neocities.org/stopusingautismasaninsult.gif" alt="Autism Acceptance" class="stamp">
+        <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_blinkies/stopusingautismasaninsult.gif" alt="Autism Acceptance" class="stamp">
                 <img src="https://serafae.neocities.org/assets/personal+icons/icons/sfs_stampbar/autismacceptence.png" alt="Autism Acceptance" class="stamp">
     </div>
 
@@ -218,97 +249,128 @@
 </style>
             
             <div id="flex">
-                <aside id="leftSidebar" style="margin-right: 10px;">
-                                                                            <iframe style="width: 200px; margin: 0px; height: 280px;" 
-                                                            src="https://serafae.neocities.org/pages/widgets/calendar"
-                                                            class="calendar-frame"
-                                                            loading="lazy">
-                                                        </iframe>
-                    <h2>Updates</h2>
-                    <div class="box">
-                        <p>I have recently updated this tool as of August 2022!</p>
-                        <ul style="padding-left:10px;">
-                            <li>Rewrote the JS to generate cleaner code</li>
-                            <li>Rewrote the CSS in a way that hopefully makes much more sense to edit</li>
-                            <li>Added a couple of new features!</li>
-                            <li>Old version is still available <a href="old.html" target="_blank">here</a></li>
-                        </ul>
-                    </div>
-                    <h2>Hi there!</h2>
-                    <h3>Other Tools</h3>
-                    <ul>
-                        <li><a href="https://sadgrlonline.github.io/html-cheatsheet/" target="_blank">HTML Cheatsheet</a>
-                        </li><li><a href="webmastery/webmaster-links.html" target="_blank">Webmaster Links</a></li>
-                        <li><a href="webmastery/downloads/tiledbgs.html" target="_blank">Tiled BGs</a></li>
-                        <li><a href="webmastery/downloads/fonts.html" target="_blank">Fonts</a></li>
-                        <li><a href="projects/ideas/" target="_blank">Site Ideas</a></li>
-                    </ul>
+                <aside id="leftSidebar" style="margin-right: 10px; background-color: #f2f2f2;">
+                                                      <style>
+                        .status {
+                            justify-content: flex-start;
+                        }
+                        
+                        .status-body {
+                            flex-basis: 100%;
+                        }
+                        .status {
+                            justify-content: center;
+                            text-align: center;
+                        }
+                        
+                        </style>
+                        
+                          <!-- 🌙 Moon Widget Placeholder -->
+                        <div class="widget moon-widget" style="text-align:center;" style="margin: -12px;" >
+                          <!-- © wdisseny -->
+                            <div id="contain_moon" style="text-align:center;padding-bottom:5px; padding-top: 5px; background-color: rgba(0, 0, 0, 0);">
+                            <div style="font-weight:bold"></div>
+                            <div style="margin-bottom: 25px; padding: 10px; filter: drop-shadow(rgb(255, 66, 161) 0px 0px 30px); height: 100px;"><svg width="100" height="100" viewBox="0 0 100 100"><defs><pattern id="image11" x="0" y="0" patternUnits="userSpaceOnUse" height="100" width="100"><image x="0" y="0" height="100" width="100" xlink:href="https://www.icalendar37.net/lunar/api/i.png"></image></pattern></defs><g><circle cx="50" cy="50" r="49" stroke="none" fill="rgb(230,214,221)"></circle><path d="M 50 1 A 49,49 0 0,1 49,99 A -22.54,49 0 0,1 50,1" stroke-width="0" stroke="none" fill="rgb(255,240,254)"></path>
+                            
+                            <a xlink:href="https://www.icalendar37.net/lunar/app/" rel="noopener noreferrer" target="_blank"><circle cx="50" cy="50" r="49" style="pointer-events:all;cursor:pointer" stroke-width="0" fill="url(#image11)"></circle></a></g></svg></div><div style="height: 22px; width: 120px;">Waxing (73%)</div><div style="font-size:small; color: rgb(53, 38, 46);">Next Full Moon<br><svg height="18" width="18" style="margin-top:-2px;display:inline-block; vertical-align:middle;stroke:rgb(230,214,221);stroke-width:px;fill:rgb(255,240,254)">
+                            
+                        
+                        
+                        <circle cx="9" cy="9" r="8"></circle>
+                        </svg> <b>28</b> August</div></div>
+                        <script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(255,240,254)&shadeColor=rgb(230,214,221)&t&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="Next Full Moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
+                          </div>
+                        <br>
+                        
+                        <div class="status-box">
+                            <ws-widget type="status" iid="7707"></ws-widget>
+                        </div>
+                        
+                        <br>
+                          
+                          <!-- 💖 Site Button -->
+                          <div class="widget site-button" style="text-align:center; height: 335px; margin: 0px;">
+                            <small><b style="color: rgb(226, 106, 162);">★ Link Me! ★</b></small>
+                            <br><br/>
+                            <img src="https://serafae.neocities.org/assets/personal+icons/icons/SFS_Site_Button_(88x31).gif" alt="Site Button" width="88" height="31">
+                            <br>
+                            <br/>
+                            
+                            <textarea readonly style="width: 160px; height: 259px; resize: none;">
+                        <a href="https://serafae.neocities.org/" target="_blank">
+                        
+                          <img src="https://serafae.neocities.org/assets/personal+icons/icons/SFS_Site_Button_(88x31).gif"
+                               alt="SERAFAE'S SLUMBER"
+                               width="88"
+                               height="31">
+                        </a>
+                            </textarea>
+                            <br>
+                          </div>
+                        
+                        <br>
+                        
+                          <!-- 🔢 Hit Counter -->
+                          <div class="widget hit-counter" style="text-align:left;">
+                            <ws-widget style="margin: 0px;" type="hc" iid="5382"></ws-widget>
+                          </div>
+                          
+                          <br>
+                            <br/>
+                            
+                              <a href="https://grrrl.valentinely.cc/">
+                              <img style="margin: 0px;" src="https://serafae.neocities.org/images/icons/madebya-pink.png" alt="Made By A Girl (Badge)" width="72" height="51">
+                            </a>
                 </aside>
-                <main>
-                    <h1>SadGrl's Layout Maker</h1>
+                
+                
+                <main style="background-color: #f2f2f2;">
+                    <h1 style="color: #b92c78;">SadGrl's Layout Maker</h1>
                     <article>
-                    <p><strong>Second, new layout incoming!</strong></p>
-                    <p>
-                    Cupcake ipsum dolor sit amet sugar plum shortbread macaroon. Topping brownie cake shortbread sesame snaps pudding icing jelly-o biscuit. Candy canes apple pie tootsie roll muffin jelly sweet roll. Tart oat cake chocolate bar jelly bonbon cake. Jelly-o ice cream candy canes bonbon tart toffee gingerbread cake jelly-o. Tootsie roll chupa chups oat cake jelly-o ice cream lollipop chocolate wafer pastry. Tart brownie cheesecake biscuit jelly-o chupa chups jelly-o. Toffee liquorice halvah powder chocolate bar cake jelly beans biscuit.
+                    
+                    <p><strong style="color: #df5fa5;">Second, new layout incoming!</strong></p>
+                    <p style="color: #61203d;">
+                    Cupcake ipsum dolor sit amet toffee tart. Sesame snaps macaroon cake candy canes croissant lollipop. Gummies I love chocolate carrot cake pudding gummies. Cookie gingerbread I love cookie tiramisu brownie I love. Wafer lemon drops oat cake jelly beans ice cream sweet roll halvah. Pie bonbon wafer cake topping I love I love marzipan. Bonbon soufflé ice cream caramels icing I love fruitcake jujubes. Caramels pastry cake jelly-o sugar plum liquorice. Biscuit muffin croissant macaroon sesame snaps I love I love liquorice I love. Brownie wafer chupa chups tart liquorice cake muffin macaroon sweet roll. Candy canes cheesecake cotton candy I love powder. Dessert chupa chups jelly-o I love icing. Pastry tiramisu I love fruitcake cake brownie.
                     </p>
-                    <p>
-                    Jujubes chupa chups sweet liquorice pie pudding. Jelly sweet roll fruitcake chocolate bar pudding biscuit dessert sweet roll. Chocolate cake pastry brownie sesame snaps icing gummi bears tootsie roll liquorice. Biscuit chocolate bar cheesecake muffin liquorice. Oat cake liquorice biscuit muffin dragée toffee sweet roll. Chocolate bar biscuit dragée tart lemon drops. Chupa chups caramels liquorice biscuit cake bear claw. Pie pastry marshmallow lollipop cupcake donut candy chocolate bar. Chocolate muffin lemon drops pudding chocolate bar cupcake biscuit ice cream cupcake. Donut sweet dragée icing gummi bears cookie.
+                    <p style="color: #61203d;">
+                    Chocolate cake danish I love I love apple pie brownie cupcake ice cream. Apple pie sesame snaps gingerbread jujubes cake halvah donut. Macaroon candy canes cheesecake I love I love lollipop lollipop I love. Halvah croissant halvah I love gingerbread. Cotton candy jujubes croissant soufflé dessert topping jujubes. Brownie liquorice bonbon cupcake chocolate pudding cake jelly beans. Powder I love chocolate bar sesame snaps jelly halvah dragée. Muffin topping halvah I love powder lemon drops biscuit pudding. Tiramisu cookie topping oat cake marshmallow I love. I love chupa chups jelly-o candy marzipan muffin gummi bears chupa chups. I love sugar plum bear claw tart pie sugar plum I love lemon drops. Icing cupcake marzipan cupcake toffee sugar plum. Pastry brownie halvah candy canes chocolate cake candy canes oat cake.
                     </p>
-                    <p>
-                    Halvah brownie marshmallow marshmallow lollipop muffin brownie jelly-o pudding. Gingerbread chocolate bar dragée toffee gingerbread cake tootsie roll. Oat cake chocolate jelly-o jelly beans chocolate bar. Sugar plum caramels topping lemon drops cake caramels danish ice cream marshmallow. Sesame snaps chocolate tart pie chocolate cake carrot cake. Carrot cake tootsie roll icing powder lollipop. Jelly chocolate cake biscuit biscuit dessert bonbon brownie oat cake.
+                    <p style="color: #61203d;">
+                    Bonbon icing brownie jelly-o donut cupcake fruitcake sugar plum sweet roll. Apple pie sweet brownie gummi bears lemon drops. Muffin tiramisu sesame snaps I love fruitcake sesame snaps candy tootsie roll. Chocolate gingerbread I love toffee powder gummi bears jelly-o lollipop. Sweet roll bonbon macaroon I love fruitcake. Gummi bears gingerbread soufflé jelly-o chocolate bar jelly-o. Pudding icing icing cake brownie. Bear claw brownie gingerbread cake dessert tart jujubes. Cake tootsie roll powder jelly beans brownie. Brownie chocolate cake cake lemon drops chupa chups sugar plum. Soufflé topping I love candy canes tootsie roll pudding I love. Soufflé jelly-o cake sesame snaps soufflé cheesecake. Danish chocolate liquorice pudding chupa chups bonbon I love fruitcake.
                     </p>
-                    <p>
-                    Gingerbread tiramisu jelly beans biscuit croissant. Oat cake fruitcake pie lollipop croissant biscuit powder. Fruitcake brownie dessert sugar plum dessert. Bonbon lemon drops danish marshmallow candy.
+                    <p style="color: #61203d;">
+                    Tiramisu chupa chups cupcake gummies muffin gummies muffin ice cream. Danish sugar plum lollipop bear claw wafer macaroon candy canes. Candy canes macaroon gingerbread bear claw halvah gummi bears. Danish sweet sweet oat cake cake cake. Gummi bears sesame snaps caramels I love cheesecake halvah.
                     </p>
+                    
                     </article>
 
 
                 </main>
                 
-<aside id="rightSidebar" style="margin-left: 10px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+<aside id="rightSidebar" style="margin-left: 10px; display: flex; flex-direction: column; align-items: center; gap: 20px; background-color: #f2f1f1;">
 
-  <!-- 🌙 Moon Widget Placeholder -->
-<div class="widget moon-widget" style="text-align:center;">
-  <!-- © wdisseny --><div id="contain_moon" style="text-align:center;padding-bottom:5px;"><div style="font-weight:bold"></div><div style="margin-bottom: 25px; padding: 10px; filter: drop-shadow(rgb(255, 66, 161) 0px 0px 30px); height: 100px;"><svg width="100" height="100" viewBox="0 0 100 100"><defs><pattern id="image11" x="0" y="0" patternUnits="userSpaceOnUse" height="100" width="100"><image x="0" y="0" height="100" width="100" xlink:href="https://www.icalendar37.net/lunar/api/i.png"></image></pattern></defs><g><circle cx="50" cy="50" r="49" stroke="none" fill="rgb(230,214,221)"></circle><path d="M 50 1 A 49,49 0 0,1 49,99 A -22.54,49 0 0,1 50,1" stroke-width="0" stroke="none" fill="rgb(255,240,254)"></path><a xlink:href="https://www.icalendar37.net/lunar/app/" rel="noopener noreferrer" target="_blank"><circle cx="50" cy="50" r="49" style="pointer-events:all;cursor:pointer" stroke-width="0" fill="url(#image11)"></circle></a></g></svg></div><div>Waxing (73%)</div><div style="font-size:small">Next Full Moon<br><svg height="18" width="18" style="margin-top:-2px;display:inline-block; vertical-align:middle;stroke:rgb(230,214,221);stroke-width:px;fill:rgb(255,240,254)">
-<title>Full moon</title>
-<circle cx="9" cy="9" r="8"></circle>
-</svg> <b>28</b> August</div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(255,240,254)&shadeColor=rgb(230,214,221)&t&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="Next Full Moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
-  </div>
+                                                                            <iframe style="width: 200px; margin: -20px; height: 280px; padding: 0px;" 
+                                                            src="https://serafae.neocities.org/pages/widgets/calendar"
+                                                            class="calendar-frame"
+                                                            loading="lazy">
+                                                        </iframe>
+                    <h2 style="color: #d52a87; margin-top: 25px; margin-bottom: 25px;">Updates</h2>
+                    <div style="background-color: #fff0fa; outline-style: solid; outline-color: rgb(239, 205, 225); border-color: #e5c4d7;" class="box">
+                        <p style="color: #591a3b;">I have recently updated this tool as of August 2022!</p>
+                        <ul style="padding-left:10px;">
+                        </ul>
+                    </div>
+                    
+                    <h2 style="color: #c84b8f;">Hi there!</h2>
+                    <h3 style="color: #a53468;">Other Tools</h3>
 
-  <!-- 💖 Site Button -->
-  <div class="widget site-button" style="text-align:center;">
-    <small>★ Link Me ★</small>
-    <br><br/>
-    <img src="https://serafae.neocities.org/assets/personal+icons/icons/SFS_Site_Button_(88x31).gif" alt="Site Button" width="88" height="31">
-    <br>
-    <br/>
-    
-    <textarea readonly style="width: 160px; height: 259px; resize: none;">
-<a href="https://serafae.neocities.org/" target="_blank">
-
-  <img src="https://serafae.neocities.org/assets/personal+icons/icons/SFS_Site_Button_(88x31).gif"
-       alt="SERAFAE'S SLUMBER"
-       width="88"
-       height="31">
-</a>
-    </textarea>
-    <br>
-  </div>
-
-  <!-- 🔢 Hit Counter -->
-  <div class="widget hit-counter" style="text-align:left;">
-    <ws-widget type="hc" iid="5382"></ws-widget>
-  </div>
-  
-      <a href="https://grrrl.valentinely.cc/">
-      <img src="https://serafae.neocities.org/images/icons/madebya-pink.png" alt="Made By A Girl (Badge)" width="72" height="51">
-    </a>
 
 </aside>
 
             </div>
-            <footer id="footer" style="margin-top: 10px;">nc sfs ± hereafter → ∞</footer>
+            <footer id="footer" style="margin-top: 11px; margin-bottom: 11px; color: rgb(69, 69, 69); background-color: #9C9C9CB5; font-family: Against; font-weight: 200;"><b><small>nc sfs ± hereafter → ∞</small></b></footer>
         </div>
+        
         <!-- THIS IS THE CSS !-->
         <style>
             /* user styles */
@@ -346,7 +408,7 @@ body {
     background-color: #08031A;
 
     /* TILED BACKGROUND */
-    background-image: url('https://serafae.neocities.org/images/backgrounds/pink/(mild-pink)_polka_dot_bg02.jpg');
+    background-image: url('https://serafae.neocities.org/images/backgrounds/pink/(mild-pink)_polka_dot_bg01.jpg');
     background-repeat: repeat;
     background-attachment: fixed;
     background-position: top left;
@@ -422,7 +484,7 @@ body {
               filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.25));
             
               /* 🩶 Textured background */
-              background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/white_fishnet_hatching_1.png');
+              background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/pale_white_fishnet_hatching.png');
               background-color: #13092D; /* fallback color */
               background-repeat: repeat;
               background-size: auto;
@@ -505,31 +567,65 @@ body {
 
 /* Resizable calendar iframe */
             
-.calendar-frame {
-    width: 260px;
-    height: 260px;
-    border: 12px solid transparent; /* thickness of lace frame */
+.calendar-wrapper {
+    flex-shrink: 0;
+    width: 216px;   /* iframe width + border */
+    height: 296px;  /* iframe height + border */
 
-    border-image-source: url("https://serafae.neocities.org/assets/personal+icons/icons/borders/tinyblkribs.png");
-    border-image-slice: 0;         /* good slice for tiny ribs */
-    border-image-repeat: round;     /* makes ribs tile evenly */
+    margin-top: 20px;
 
-    overflow: hidden;
-    display: block;
-    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible; /* REQUIRED */
 }
+
+            
+.calendar-frame {
+  width: 160px;
+  height: 160px;
+
+  border: 10px solid transparent; /* thickness of lace frame */
+
+  border-image-source: url("");
+  border-image-slice: null;          /* corner size based on Solaria’s guide */
+  border-image-repeat: round;      /* repeats sides evenly */
+  border-image-width: 100%;          /* matches border thickness */
+  background-clip: padding-box;    /* keeps background inside border */
+
+  overflow: hidden;
+  display: block;
+  background: transparent;
+}
+
 
             
 
 
             /* this is the color of the main content area,
     between the sidebars! */
-            main {
-                background-color: #43256E;
-                flex: 1;
-                padding: 20px;
-                order: 2;
-            }
+            
+          
+                  main 
+                  
+                          {
+                      background-color: #f2f1f1;
+                      background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/pale_white_hatching.png');
+                      background-repeat: repeat;
+                      background-size: auto;
+                  
+                      flex: 1;
+                      padding: 20px;
+                      order: 2;
+                  
+                      border: 10px solid transparent;
+                      border-image-source: url("https://itinerae.neocities.org/borders/lace/black.webp");
+                      border-image-slice: 5;
+                      border-image-repeat: round;
+                      border-image-width: 6px;
+                  }
+
 
             /* what's this "order" stuff about??
     allow me to explain!
@@ -537,55 +633,73 @@ body {
     tells the CSS the order in which to display them.
     left sidebar is 1, content is 2, and right sidebar is 3! */
 
-            #leftSidebar {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: visible; /* prevents clipping */
-}
+                    #leftSidebar {
+                        order: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        overflow: visible;
+                    
+                        /* 🌸 Background hatching */
+                        background-color: #13092D; /* or whatever base you prefer */
+                        background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/white_hatching3.png');
+                        background-repeat: repeat;
+                        background-size: auto;
+                    
+                        /* 🖤 Lace border */
+                        border: 10px solid transparent;
+                        border-image-source: url("https://itinerae.neocities.org/borders/lace/black.webp");
+                        border-image-slice: 5;
+                        border-image-repeat: round;
+                        border-image-width: 6px;
+                    }
+
             
-            .calendar-wrapper {
-    flex-shrink: 0;      /* prevents shrinking */
-    width: 160px;        /* exact calendar width */
-    height: auto;
-    margin-top: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-            
-            .calendar-frame {
-    width: 200px !important;
-    height: 280px !important;
-
-    border: 10px solid transparent;
-    border-image-source: url("https://serafae.neocities.org/assets/personal+icons/icons/borders/tinyblkribs.png");
-    border-image-slice: 20;
-    border-image-repeat: round;
-
-    overflow: hidden;
-    display: block;
-    background: transparent;
-}
 
 
 
 
-            #rightSidebar {
-                order: 3;
-            }
+
+
+                #rightSidebar {
+                    order: 3;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    overflow: visible;
+                
+                    /* 🌸 Background hatching */
+                    background-color: #13092D; /* or your preferred base */
+                    background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/white_hatching3.png');
+                    background-repeat: repeat;
+                    background-size: auto;
+                
+                    /* 🖤 Lace border */
+                    border: 10px solid transparent;
+                    border-image-source: url("https://itinerae.neocities.org/borders/lace/black.webp");
+                    border-image-slice: 5;
+                    border-image-repeat: round;
+                    border-image-width: 6px;
+                }
+
 
             footer {
-                background-color: #13092D;
-                /* background color for footer */
-                width: 100%;
-                height: 40px;
-                padding: 10px;
-                text-align: center;
-                /* this centers the footer text */
-            }
+                  width: 100%;
+                  height: 40px;
+                  padding: 0px;
+                  text-align: center;
+                  
+                  background-color: #13092D;
+                  background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/pale_white_fishnet_hatching.png');
+                  background-repeat: repeat;
+                  background-size: auto;
+                  
+                  border: 10px solid transparent;
+                  border-image-source: url("https://serafae.neocities.org/assets/personal+icons/icons/borders/blacklace2.png");
+                  border-image-slice: 8;
+                  border-image-repeat: round;
+                  border-image-width: 6px;
+              }
 
             h1,
             h2,
@@ -629,7 +743,7 @@ body {
 
 
                               #topBar {
-                                  background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/white_fishnet_hatching_1.png');
+                                  background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/pale_white_fishnet_hatching.png');
                                   background-repeat: repeat;
                                 
                                   border: 8px solid transparent;
@@ -739,8 +853,8 @@ body {
     /* . . . . . . . . . . . . . . . */            
 
     ::selection{ 
-        color: #fff;
-        background-color:#FF008C30;
+        color: #005960B5;
+        background-color: #90F1F180;
     }    
  
 
@@ -750,7 +864,222 @@ body {
   </style>
   
   
+                                        <div id="crt">
+                      <link rel="stylesheet" href="css/classic_crt.css">
+                  </div>
+  
 
+
+<style>
+html::before,
+html::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 73px;
+
+    pointer-events: none; /* never blocks clicks */
+    z-index: -1;          /* sits behind EVERYTHING */
+}
+
+/* Top lace border */
+html::before {
+    top: 0;
+    filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.25));
+    background-image: url('https://serafae.neocities.org/images/dividers/behind/01_white.png');
+    background-repeat: repeat-x;
+    background-position: top center;
+}
+
+/* Bottom lace border */
+html::after {
+    bottom: 0;
+    filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.25));
+    background-image: url('https://serafae.neocities.org/images/dividers/behind/02_white.png');
+    background-repeat: repeat-x;
+    background-position: bottom center;
+}
+
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array('#ff64aa', '#fe96ec', '#e9ffc2', '#c1ffb9', '#8ce2fd', '#79ffaf'); // colours of the hearts
+var minisize=16; // smallest size of hearts in pixels
+var maxisize=28; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(mwah);
+
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9734)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9734);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9734);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
 
 
 </body>
