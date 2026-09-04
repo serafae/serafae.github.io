@@ -1,0 +1,207 @@
+<html lang="en">
+<head>	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>[WIP] Serafae's Slumber • Calendar</title>
+    
+        <link rel="icon" type="image/x-icon" href="https://serafae.neocities.org/favicon/favicon.ico">
+        <link rel="stylesheet" href="https://serafae.neocities.org/css/hover.css" media="all">
+                           <script src="https://serafae.neocities.org/js/rainbow_cursortrail.js" defer>
+                         </script>
+
+                                  <style>
+                                  ::-webkit-scrollbar {
+                                    display: none;
+                                  }
+                                  
+                                  * {
+                                    scrollbar-width: none; /* Firefox */
+                                  }
+                                  </style>
+                                                                                                                   
+                                                                                                <style>
+                                                                                                   div[style*="position: absolute"] {
+                                                                                                          filter:
+                                                                                                              drop-shadow(0 0 4px rgba(213, 244, 255, 0.9))
+                                                                                                              drop-shadow(0 0 10px rgba(213, 244, 255, 0.6));
+                                                                                                      }
+                                                                  
+                                                                                                        /* === SOFT FLICKER ANIMATION === */
+                                                                                                        @keyframes flicker {
+                                                                                                            0%   { opacity: 0.06; }
+                                                                                                            100% { opacity: 0.02; }
+                                                                                                        }
+                        
+                                                                                                           </style>
+                    <style>
+                    /* Chrome - Link Select on calendar only */
+                    #calendar, #calendar * {
+                        cursor: url('https://serafae.neocities.org/assets/misc-buttons/cursors/pinkprecision.webp') 43 34, auto !important;
+                    }
+                    /* End Cursors-4U Code */
+                    
+                              
+                    </style>
+    
+</head>
+
+<body style="margin:0; background:#F1DAED; display:flex; justify-content:center; align-items:center; height:100vh;">
+
+<script src="/css/index/calendar.js"></script>
+
+                                        <div id="crt">
+                      <link rel="stylesheet" href="css/classic_crt.css">
+                  </div>
+    
+    <style>
+
+  @font-face {
+      font-family: 'Saint';
+      src: url('https://serafae.neocities.org/assets/fonts/fontfaces/Saint.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  </style>
+  
+  <style>
+
+body {
+    margin: 0;
+    background: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Base calendar */
+
+#calendar {
+    font-family: 'Saint' !important;
+}
+
+#calendar {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1.25fr 7fr;
+    height: 170px;
+    width: 170px;
+    padding: 2px;
+    gap: 2px;
+
+    font-family: 'Saint,' !important;
+    font-size: 14px;
+
+    background:linear-gradient(0deg,rgba(93,8,52,1)0%,rgba(35,0,24,1)48%);
+    border: 1px solid #1c0014;
+}
+
+/* Header (month/year) */
+
+#calendarHeader,
+.calendarDayOfTheWeek,
+.calendarCell {
+    font-family: 'Saint' !important;
+}
+
+#calendarHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 1.3em;
+
+    color: #FFE2F9;
+    background:linear-gradient(180deg,rgba(40,0,21,1)23%,rgba(188,82,137,255)75%);
+    border: 1px solid #6B0050;
+
+    text-shadow: 0 0 8px #B8006EFF;
+}
+
+/* Grid layout */
+#calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+/* Day labels */
+.calendarDayOfTheWeek {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    color: #F4D7EC;
+
+    background:linear-gradient(0deg,rgba(40,0,21,1)23%,rgba(188,82,137,255)75%);
+    border: 1px solid #5F1A3EFF;
+    
+    text-shadow: 0 0 4px #B8006EFF;
+}
+
+/* Day cells (KEEP SQUARE STYLE) */
+
+
+.calendarCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background:linear-gradient(180deg,rgba(11,0,6,1)13%,rgba(131,51,104,1)99%);
+    border: 1px solid #280015;
+    color: #E299D2;
+    border: 1px solid #4F2139FF;
+
+    cursor: default;
+    user-select: none;
+    
+    text-shadow: 0 0 4px #B8006EFF
+}
+
+/* Outside month */
+.calendarNonMonthDay {
+    color: #BF9AB6;
+    background:linear-gradient(180deg,rgba(11,0,6,1)13%,rgba(74,29,59,1)99%);
+    text-shadow: 0 0 4px #B8006EFF;
+    border: 1px solid #531133FF;
+}
+
+/* Today highlight */
+.calendarToday {
+    background:linear-gradient(90deg,rgba(49,24,36,1)4%,rgba(140,35,96,255)47%,rgba(109,36,81,255)95%);
+    border: 1px solid #EA9BD9;
+    color: #FFD3F5;
+    text-shadow: 0 0 4px #E2CADC;
+    box-shadow: 0 0 6px #FBC8EF, 0 0 8px #E360C7;
+}
+</style>
+
+    <style>
+        /* . . . . . . . . . . . . . . . */ 
+    a{
+        color: #FF5CB6FF;
+        text-decoration:dotted underline;
+    }
+    a:hover{
+        color: #FFABD9FF;
+    }
+    
+    /* . . . . . . . . . . . . . . . */            
+
+    ::selection{ 
+        color:white;
+        background-color:#FF008C30;
+    }    
+
+    /* . . . . . . . . . . . . . . . */     
+    
+    
+    </style>
+
+</body>
+</html>
