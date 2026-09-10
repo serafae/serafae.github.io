@@ -10,7 +10,7 @@
                                                             
     <title>[WIP] Serafae's Slumber • Blank Page</title>
     
-        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="https://serafae.neocitiecals.org/favicon/favicon.ico">
         
         <link rel="stylesheet" href="https://serafae.neocities.org/css/hover.css" media="all">
         <link rel="stylesheet" href="https://serafae.neocities.org/css/scrollbar.css" media="all">
@@ -132,7 +132,7 @@
               
               </div>
             <div id="headerArea">
-                <div id="header" style="height: 500px; background-color: #ebf3f8;">
+                <div id="header" style="height: 800px; width: auto; background-color: #ebf3f8; ">
                 </div>
                 
                 
@@ -327,9 +327,6 @@
                           </div>
                         <br>
                         
-                         <div class="weather">
-                                                <ws-widget type="weather" iid="10403"></ws-widget>
-                                                </div>
                                             
                         
                         <div class="status-box">
@@ -347,13 +344,19 @@
                             <iframe src="https://serafae.neocities.org/pages/widgets/smaller_calendar.html" width="170px" height="170px" name="calendar" scrolling="no" style="border: none" allowfullscreen></iframe>
                         
                         </div>
-                      
+                        
                       <br>
-
                                   <div class="last played">
                             <ws-widget type="lastfm" iid="10404"></ws-widget>
                             </div>
-                          
+                            
+                            <br>
+
+                                              <div class="weather">
+                                                <ws-widget type="weather" iid="10403"></ws-widget>
+                                                </div>
+
+                            
                             <br>
                             
                                       <!-- 🔢 Hit Counter -->
@@ -455,53 +458,65 @@
                 
 <aside id="rightSidebar" style="margin-left: 10px; display: flex; flex-direction: column; align-items: center; gap: 4px; background-color: #f2f1f1;">
 
- <div class="personal button wall"
-              
-              div style="
-                  width: 189px;
-                  height: 253px;
-                  margin: 1 auto;
-                  display: flex;
-                  flex-wrap: wrap;
-                  align-content: center;
-                  align-items: flex-start;
-                  justify-content: space-evenly;
-                  flex-direction: column;
+                  <style>
+                  .personal.button.wall img {
+                      transition: filter 0.2s ease, transform 0.2s ease;
+                  }
                   
-                  background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/whitedottedhatching.png');
-    background-repeat: repeat;
-              
-                  /* lace border */
-                  border: 10px solid transparent;
-                  border-image-source: url('https://serafae.neocities.org/assets/personal+icons/icons/borders/hotpinklace.png');
-                  border-image-slice: 5;
-                  border-image-repeat: round;
-                  border-image-width: 4.5px;
-               margin-top: -23px;">
-               
-               <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/sailor-moon-button.gif" alt="prettysoldiersailormoon" style="width:88px;">
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/neo-queen-serenity.gif" alt="neoqueenserenity" style="width:88px;">
-              
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/hello-kitty.gif" alt="hellokitty" style="width:88px;">
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/mb_wave.gif" alt="rainbow_hk" style="width:88px;">
-              
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/notperfect.gif" alt="worldismine_miku" style="width:88px;">
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/ca2.gif" alt="not_perfect_strawberry" style="width:88px;">
-              
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/the-world-is-mine-pv-hatsune-miku.gif" alt="calneca_miku" style="width:88px;">
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/ditchsocialmedia.gif" alt="calne_ca" style="width:88px;">
-              
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/freespeechforever.gif" alt="sRGB" style="width:88px;">
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/learnhtmltoday.gif" alt="idreaminhtml" style="width:88px;">
-              
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/christnow.gif" alt="christ_now" style="width:88px;">
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/hedied4u.gif" alt="christdied4u" style="width:88px;">
-              
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/srgb-now.png" alt="ditch_social-media_now" style="width:88px;">
-                  <img src="https://widget.st/files/0c7c009e8732f1932d5a0e11a07f36d3/hatsunemikuapprovalbutton88x31.gif" alt="free_speech" style="width:88px;">
-              
-              
-              </div>
+                  .personal.button.wall img:hover {
+                      filter: brightness(1.3);
+                      box-shadow: 0 0 6px rgba(255, 200, 230, 0.7);
+                  }
+                  
+                  </style>
+                  
+<div class="personal button wall" 
+     style="
+        width: 189px;
+        height: 253px;
+        margin: 1 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/whitedottedhatching.png');
+        background-repeat: repeat;
+
+        border: 10px solid transparent;
+        border-image-source: url('https://serafae.neocities.org/assets/personal+icons/icons/borders/hotpinklace.png');
+        border-image-slice: 5;
+        border-image-repeat: round;
+        border-image-width: 4.5px;
+
+        margin-top: -23px;
+     ">
+
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/sm_99.gif" alt="prettysoldiersailormoon" width="88">
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/neoqueenserenity.gif" alt="neoqueenserenity" width="88">
+
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/hello-kitty.gif" alt="hello-kitty" width="88">
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/hk_rb.gif" alt="rainbow_hk" width="88">
+
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/notperfect.gif" alt="worldismine_miku" width="88">
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/ca2.gif" alt="not_perfect_strawberry" width="88">
+
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/world_is_mine.gif" alt="calneca_miku" width="88">
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/learnhtml2day.gif" alt="learnhtml2day" width="88">
+
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/Best-Viewed-With-A-Budgie.gif" alt="Best-Viewed-With-A-Budgie" width="88">
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/ditchsocialmedia.gif" alt="ditchsocialmedia" width="88">
+
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/christnow.gif" alt="christnow" width="88">
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/freespeechforever.gif" alt="freespeechforever" width="88">
+
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/hedied4u.gif" alt="hedied4u" width="88">
+    <img src="https://serafae.neocities.org/assets/personal+icons/icons/site_button/hatsunemikuapproval.gif" alt="hatsunemikuapproval" width="88">
+
+</div>
+
 
 <br>
 
@@ -660,33 +675,27 @@
     width: 171px;
     padding: 10px;
     margin: 1 auto;
-
-    background:linear-gradient(0deg,rgba(255,242,249,255)66%,rgba(255,255,255,255)68%,rgba(255,183,229,255)100%,rgba(255,123,200,255)49%);
-
+    background: linear-gradient(0deg, rgba(255, 242, 249, 255) 66%, rgba(255, 255, 255, 255) 68%, rgb(251 97 202) 100%, rgb(218 92 249) 49%);
     border: 1px dotted #ffe4f3;
     border-radius: 6px;
-
-    /* ensures inner items center properly */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 /* Your textarea styling preserved */
 .link-box {
     width: 153px;
     height: 237px;
     resize: none;
     padding: 10px;
-    background: #f5fffe;
-    color: #94abad;
+    background: #f9fffe;
+    color: #f13eb8;
     font-family: 'MS PGothic';
     font-size: 12px;
     line-height: 1.3;
     border: 1px solid rgb(101 101 101 / 17%);
     border-radius: 4px;
-    box-shadow: 0 0 4px rgba(213, 244, 255, 0.9),
-                0 0 10px rgba(213, 244, 255, 0.3);
+    box-shadow: 0 0 4px rgb(243 98 212 / 97%), 0 0 10px rgba(213, 244, 255, 0.3);
     overflow-y: auto;
     display: block;
     margin: 0 auto;
@@ -754,8 +763,8 @@
     the images as variables */
 
             :root {
-                --header-image: url('https://serafae.neocities.org/assets/headers/blue_butterfly_sfs.gif');
-                --body-bg-image: url('https://serafae.neocities.org/images/backgrounds/pink/pink_black_fancy_lace_bg03.jpg');
+                --header-image: url('https://serafae.neocities.org/assets/headers/site_header_title_animated.gif');
+                --body-bg-image: url('https://serafae.neocities.org/images/backgrounds/blue_black_fancy_lace_bg02.jpg');
 
                 /* colors */
                 --content: #43256E;
@@ -765,12 +774,12 @@
             /* feel free to delete this if it's not your vibe */
 
             /* this seems like a lot for just one font and I would have to agree 
-    but I wanted to include an example of how to include a custom font.
-    If you download a font file you can upload it onto your Neocities
-    and then link it! Many fonts have separate files for each style
-    (bold, italic, etc. T_T) which is why there are so many!
-    
-    */
+                    but I wanted to include an example of how to include a custom font.
+                    If you download a font file you can upload it onto your Neocities
+                    and then link it! Many fonts have separate files for each style
+                    (bold, italic, etc. T_T) which is why there are so many!
+                    
+                    */
 
 
         
@@ -780,7 +789,7 @@ body {
     background-color: #efdcee;
 
                 /* TILED BACKGROUND */
-                background-image: url('https://serafae.neocities.org/images/backgrounds/pink/pink_black_fancy_lace_bg03.jpg');
+                background-image: url('https://serafae.neocities.org/images/backgrounds/blue_black_fancy_lace_bg02.jpg');
                 background-repeat: repeat;
                 background-attachment: fixed;
                 background-position: top left;
@@ -825,24 +834,25 @@ body {
       text-decoration:none; */
             }
 
-            #header {
+              #header {
               width: 100%;
-              height: 150px;
-              background-color: #5e4e8c;
+              height: 100%; /* or whatever height you want */
               background-image: var(--header-image);
-              background-size: 100%;
+              background-size: cover;
               background-repeat: no-repeat;
-            
+              background-position: center;
+
+
               /* 🖤 Lace border */
               border: 20px solid transparent;
-              border-image-source: url("https://serafae.neocities.org/assets/personal+icons/icons/borders/bluelacedecorum.png");
+              border-image-source: url("https://serafae.neocities.org/assets/personal+icons/icons/borders/darknavybluelacedecorum.png");
               border-image-slice: 29; /* corner size based on Solaria’s guide */
               border-image-repeat: round; /* repeats sides evenly */
               border-radius: 0; /* border-image doesn’t support radius */
               background-clip: padding-box; /* keeps background inside border */
             
               /* ✨ Glow */
-              filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.25));
+              filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.3));
             }
 
 
@@ -853,7 +863,7 @@ body {
               width: 100%;
             
               /* ✨ Glow effect */
-              filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.25));
+              filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.5));
             
               /* 🩶 Textured background */
               background-image: url('https://serafae.neocities.org/assets/personal+icons/icons/sfs_textures/pale_white_fishnet_hatching.png');
@@ -1136,7 +1146,7 @@ body {
                                         /* Hover effect */
                                         h1:hover, h2:hover, h3:hover {
                                             color: #ffd6f7; /* barely lighter, not bright */
-                                            letter-spacing: 0.1px; /* tiny atmospheric spacing */
+                                            letter-spacing: 0.05px; /* tiny atmospheric spacing */
                                             opacity: 0.85; /* soft fade, not glow */
                                             transition: color 0.3s ease, letter-spacing 0.3s ease, opacity 0.3s ease;
                                         }
@@ -1169,7 +1179,7 @@ body {
                                   border-image: url("https://serafae.neocities.org/assets/personal+icons/icons/borders/blacklace2.png") 8 round;
                                 
                                                 /* ✨ Glow effect */
-              filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.25));
+              filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.5));
                                 
                                   overflow: hidden;
                                 
@@ -1303,7 +1313,7 @@ html::after {
     pointer-events: none; /* never blocks clicks */
     z-index: -1;          /* sits behind EVERYTHING */
         opacity: 0.92; /* adjust between 0.1–0.9 */
-    filter: drop-shadow(0 0 10px rgba(255, 66, 161, 0.8));
+    filter: drop-shadow(0 0 10px rgba(8, 70, 213, 0.8));
 }
 
 /* Top lace border */
