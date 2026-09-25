@@ -1,0 +1,50 @@
+        <div class="content">
+
+            <h1>Acknowledgements</h1>
+            
+            <p>This website would not look or function the way it does without the generosity of the following creators and resources.</p>
+            
+            <dl>
+                <dt><a href="https://404city.neocities.org/" target="_blank">404City</a></dt>
+                <dd>For the calendar widget and scripts I adapted for this layout.</dd>
+
+                <dt><a href="https://atabook.org/" target="_blank">Atabook.org</a></dt>
+                <dd>For hosting my guestbook — easy and efficient to use.</dd>
+
+                <dt><a href="https://www.dafont.com/" target="_blank">DaFont.com</a></dt>
+                <dd>For providing demo fonts and clear licensing options.</dd>
+                
+                <dt><a href="https://archive.doqmeat.com/" target="_blank">Doqmeat</a></dt>
+                <dd>For the amazing diary layout I modified and use.</dd>
+
+                <dt><a href="https://fontmeme.com/" target="_blank">FontMeme.com</a></dt>
+                <dd>For font licensing help and easy text-art customization.</dd>
+
+                <dt><a href="https://gumroad.com/" target="_blank">Gumroad</a></dt>
+                <dd>For smooth creator transactions and access to high-quality assets.</dd>
+
+                <dt><a href="https://loveblush.net/" target="_blank">LoveBlush.net</a></dt>
+                <dd>For the useful scripts I’ve used on this site.</dd>
+
+                <dt><a href="https://nekoweb.org/" target="_blank">NekoWeb.org</a></dt>
+                <dd>For hosting my mirror/backup site (also owned by Atabook).</dd>
+
+                <dt><a href="https://shenanigans.neocities.org/" target="_blank">Shenanigans / WindChime</a></dt>
+                <dd>For the “Island” layout template, the clock widget, and the stylish foundation of this site.</dd>
+            </dl>
+
+            <p class="note">
+                All fonts and assets are used respectfully within their respective licenses for non-commercial, personal creative purposes.</p>
+                
+                <br/>
+                
+              
+                <div class="right">
+                <style>
+                .right {
+    text-align: right;
+}
+                </style>
+ 
+    <strong><i>This list is not final and is always subject to updates whenever I discover or make use of new resources.</i></strong>
+</div>
