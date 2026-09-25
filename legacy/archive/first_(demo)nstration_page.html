@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[WIP] Serafae's Slumber • Demonstration</title>
+    
+    <link rel="icon" type="image/x-icon" href="https://serafae.neocities.org/favicon/favicon.ico">
+    
+        <style>
+* {
+  cursor: url('https://serafae.neocities.org/assets/misc-buttons/cursors/chrome-pointer-main.webp') 34 34, auto !important;
+}
+    </style>
+    
+    
+    <style>
+        @font-face {
+            font-family: 'Against';
+            src: url('https://serafae.neocities.org/assets/fonts/fontfaces/Against.otf') format('opentype');
+            font-display: swap;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 60px;
+            min-height: 100vh;
+            background-image: url('https://serafae.neocities.org/images/backgrounds/pink/lacepolkadotbg01noirpink.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Against', serif;
+            color: #FFD1EAFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Text shadow - soft whitesmoke glow */
+        .content {
+            text-shadow: 
+                0 0 8px rgba(179, 0, 99, 0.9),
+                0 0 16px rgba(179, 0, 99, 0.6),
+                2px 2px 4px rgba(0, 0, 0, 0.7);
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: #FFEEF7;
+            text-shadow: 
+                0 0 10px rgba(228, 0, 124, 0.95),
+                0 0 20px rgba(228, 0, 124, 0.6);
+        }
+
+        /* Container for easy z-index layering */
+        .overlay-container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            z-index: 1;
+        }
+
+        /* Example character/image layer - easy to move with z-index */
+        .character {
+            position: absolute;
+            z-index: 10;
+            opacity: 0.95;
+            filter: drop-shadow(0 0 12px rgba(0,0,0,0.6));
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay-container">
+
+
+        <div class="content">
+        
+            <!-- My main text/content should go here -->
+            <h1>My Page Title</h1>
+            <p>Start writing here...</p>
+        </div>
+
+    </div>
+    
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array('#FF47ACFF', '#FF86C8FF', '#FFB4DDFF', '#FFD9EEFF', '#FF63B9A3', '#FF008CA3'); // colours of the hearts
+var minisize=16; // smallest size of hearts in pixels
+var maxisize=28; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(mwah);
+
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9734)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9734);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9734);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+
+<style>
+    /* . . . . . . . . . . . . . . . */ 
+    a{
+        color: #836776FF;
+        text-decoration:dotted underline;
+    }
+    a:hover{
+        color: #F8A8D4DB;
+    }
+    
+    /* . . . . . . . . . . . . . . . */            
+
+    ::selection{ 
+        color: white;
+        background-color: #FD9BD16E;
+    }    
+
+    /* . . . . . . . . . . . . . . . */    
+</style>
+
+<style>
+/**********************************************SCROLLBAR****************************************/
+
+
+::-webkit-scrollbar {
+width: 13px
+}
+
+::-webkit-scrollbar:horizontal {
+height: 13px
+}
+
+::-webkit-scrollbar-corner {
+background: #eee
+}
+
+::-webkit-scrollbar-track:vertical {
+background: linear-gradient(90deg, #e5e5e5, #f0f0f0 20%);
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-track:horizontal {
+background: linear-gradient(180deg, #e5e5e5, #f0f0f0 20%);
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+border: 1.5px solid #888;
+border-radius: 5px;
+box-shadow: inset 0 -1px 1px #fff, inset 0 1px 1px #fff;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+background: linear-gradient(90deg, #eee 45%, #ddd 0, #bbb);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+background: linear-gradient(180deg, #eee 45%, #ddd 0, #bbb);
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement {
+display: block
+}
+
+::-webkit-scrollbar-button:vertical {
+height: 8x
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+background: white;
+background: url("https://serafae.neocities.org/css/custom-scrollbars/scroll3.png"), #eee;
+background-repeat: no-repeat;
+background-position: center;
+-moz-background-size: 100% auto, cover;
+-webkit-background-size: 100% auto, cover;
+-o-background-size: 100% auto, cover;
+background-size: 100% auto, cover;
+border: 1.5px solid #888;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment {
+display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:decrement {
+display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+background: white;
+background: url("https://serafae.neocities.org/css/custom-scrollbars/scroll4.png"), #eee;
+background-repeat: no-repeat;
+background-position: center;
+-moz-background-size: 100% auto, cover;
+-webkit-background-size: 100% auto, cover;
+-o-background-size: 100% auto, cover;
+background-size: 100% auto, cover;
+border: 1.5px solid #888;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-button:horizontal {
+width: 8px
+}
+::-webkit-scrollbar-button:horizontal:start:increment {
+display: none;
+}
+::-webkit-scrollbar-button:horizontal:end:decrement {
+display: none;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+background: white;
+background: url("https://serafae.neocities.org/css/custom-scrollbars/scroll5.png"), linear-gradient(180deg, #e5e5e5, #f0f0f0 20%);
+background-repeat: no-repeat;
+background-position: center;
+-moz-background-size: 100% auto, cover;
+-webkit-background-size: 100% auto, cover;
+-o-background-size: 100% auto, cover;
+background-size: 100% auto, cover;
+background-position: center;
+border-radius: 5px;
+border: 1.5px solid #888;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+background: white;
+background: url("https://serafae.neocities.org/css/custom-scrollbars/scroll6.png"), linear-gradient(180deg, #e5e5e5, #f0f0f0 20%);
+background-repeat: no-repeat;
+background-position: center;
+-moz-background-size: 100% auto, cover;
+-webkit-background-size: 100% auto, cover;
+-o-background-size: 100% auto, cover;
+background-size: 100% auto, cover;
+background-position: center;
+border-radius: 5px;
+border: 1.5px solid #888;
+}
+
+
+img.thumb,
+a.thumb:active img,
+a.thumb:link img,
+a.thumb:visited img {padding: 6px;
+background-image: url();
+background-color: #f0f0f0;
+background-position: top left;
+border: 1px solid #f5f5f5;
+margin: 2px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+</style>
+
+</body>
+</html>
