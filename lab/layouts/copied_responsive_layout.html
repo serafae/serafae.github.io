@@ -10,14 +10,18 @@
     
                                                                         <meta name="keywords" content= "serafae, slumber, lace, spiderweb, pixel, bitmap, serif, retro web, 2007 aesthetic, 2010 aesthetic, magical girl, butterfly, mexican bluewing, budgie, blinkies, stamps, marquee, neocities, personal site, webmaster, handcrafted, gothic lace, cerulean, pink and black, atmospheric, old web, early internet, web revival, digital shrine, aesthetic collage, texture, grayscale friendly">
                                                             
-    <title>[WIP] Serafae's Slumber • Home</title>
+    <title>home • serafae's slumber</title>
     
-        <link rel="icon" type="image/x-icon" href="https://serafae.neocities.org/favicon/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
         
-        <link rel="stylesheet" href="https://serafae.neocities.org/css/hover.css" media="all">
-        <link rel="stylesheet" href="https://serafae.neocities.org/css/scrollbar.css" media="all">
+        <link rel="stylesheet" href="/css/hover.css" media="all">
         
-                   <script src="https://serafae.neocities.org/js/rainbow_cursortrail.js" defer>
+        <link rel="stylesheet" href="/css/custom-scrollbars/aero_web1.css" media="all">
+
+            <link rel="stylesheet" href="https://serafae.neocities.org/css/classic_crt.css">
+            
+                <script src="/js/animated_cursor.js" defer></script>
+                   <script src="/js/rainbow_cursortrail.js" defer>
                          </script>
                    
                    
@@ -43,28 +47,6 @@
                                         
                                         <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
 
-
-                                                    <script>
-                                                        document.addEventListener('mousemove', function(e) {
-                                                          const cursor = document.getElementById('animated-cursor');
-                                                          cursor.style.left = e.pageX + 'px';
-                                                          cursor.style.top = e.pageY + 'px';
-                                                        });
-                                                            </script>
-
-                                                                  <script>
-                                                                      document.addEventListener("mouseover", function(e) {
-                                                                        if (e.target.closest("a")) {
-                                                                          document.getElementById("animated-cursor").style.opacity = "0";
-                                                                        }
-                                                                      });
-                                                                      
-                                                                      document.addEventListener("mouseout", function(e) {
-                                                                        if (e.target.closest("a")) {
-                                                                          document.getElementById("animated-cursor").style.opacity = "1";
-                                                                        }
-                                                                      });
-                                                                                  </script>
 
   </head>
 
@@ -398,6 +380,12 @@
           <img src="https://github.com/serafae/serafae.github.io/blob/main/assets/media/clutter/kins/bloom_winxstockart_posed2.png?raw=true"
                alt="Bloom"
                style="
+               pointer-events: none;
+               user-select: none;
+               -webkit-user-select: none;
+               -moz-user-select: none;
+              -ms-user-select: none;
+            
                  float: right; /* left or right */
                  margin: -11px -12px 10px 0; /* top, right, bottom, left spacing */
                  position: relative;
@@ -406,7 +394,9 @@
                  width: 205px; /* adjust size */
                  height: 275px;
                       border-radius: 6px;
-                margin-left: -12px; padding: 0px; margin-bottom: 10px;">
+                margin-left: -12px; padding: 0px; margin-bottom: 10px;"
+                
+                >
 
                           <p style="color: #494949;">
                             Offline, I’m just Dan.
@@ -437,6 +427,12 @@
              <img src="https://raw.githubusercontent.com/serafae/serafae.github.io/refs/heads/main/assets/media/clutter/kins/Winx_Bloom_Posed_2.png"
      alt="Bloom Magic Winx"
      style="
+      pointer-events: none;
+               user-select: none;
+               -webkit-user-select: none;
+               -moz-user-select: none;
+              -ms-user-select: none;
+              
        float: left; /* or left */
        width: 210px; /* adjust size */
         height: 461px; 
@@ -455,7 +451,7 @@
                                        1px -1px 0 #ffffff,
                                       -1px  1px 0 #ffffff,
                                        1px  1px 0 #ffffff;
-                                   font-size: 9px;">
+                                   font-size: 8.5px;">
                                     (And That Is) My Prerogative!
                                                     </h2>
 
@@ -789,6 +785,119 @@
     margin: 0 auto 10px auto;
     text-align: center;
 }
+
+/* Apply Aero Web 2 ONLY to the textarea */
+.link-box::-webkit-scrollbar {
+    width: 14px;
+}
+
+.link-box::-webkit-scrollbar:horizontal {
+    height: 14px;
+}
+
+.link-box::-webkit-scrollbar-corner {
+    background: #eee;
+}
+
+.link-box::-webkit-scrollbar-track:vertical {
+    background: linear-gradient(90deg, #e5e5e5, #f0f0f0 20%);
+    border-radius: 3px;
+}
+
+.link-box::-webkit-scrollbar-track:horizontal {
+    background: linear-gradient(180deg, #e5e5e5, #f0f0f0 20%);
+    border-radius: 3px;
+}
+
+.link-box::-webkit-scrollbar-thumb {
+    border: 1.5px solid #888;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 1px #fff, inset 0 1px 1px #fff;
+}
+
+.link-box::-webkit-scrollbar-thumb:vertical {
+    background: url("https://serafae.neocities.org/css/custom-scrollbars/vertical_grid.png") no-repeat 50%, 
+                linear-gradient(90deg, #eee 45%, #ddd 0, #bbb);
+}
+
+.link-box::-webkit-scrollbar-thumb:horizontal {
+    background: url("https://serafae.neocities.org/css/custom-scrollbars/horizontal_grid.png") no-repeat 50%, 
+                linear-gradient(180deg, #eee 45%, #ddd 0, #bbb);
+}
+
+.link-box::-webkit-scrollbar-button:horizontal:end:increment,
+.link-box::-webkit-scrollbar-button:horizontal:start:decrement,
+.link-box::-webkit-scrollbar-button:vertical:end:increment,
+.link-box::-webkit-scrollbar-button:vertical:start:decrement {
+    display: block;
+}
+
+.link-box::-webkit-scrollbar-button:vertical {
+    height: 15px;
+}
+
+.link-box::-webkit-scrollbar-button:vertical:start:decrement {
+    background: white;
+    background: url("https://serafae.neocities.org/css/custom-scrollbars/scroll3.png"), #eee;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto, cover;
+    border: 1.5px solid #888;
+    border-radius: 3px;
+}
+
+.link-box::-webkit-scrollbar-button:vertical:start:increment {
+    display: none;
+}
+
+.link-box::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+.link-box::-webkit-scrollbar-button:vertical:end:increment {
+    background: white;
+    background: url("https://serafae.neocities.org/css/custom-scrollbars/scroll4.png"), #eee;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto, cover;
+    border: 1.5px solid #888;
+    border-radius: 3px;
+}
+
+.link-box::-webkit-scrollbar-button:horizontal {
+    width: 14px;
+}
+
+.link-box::-webkit-scrollbar-button:horizontal:start:increment {
+    display: none;
+}
+
+.link-box::-webkit-scrollbar-button:horizontal:end:decrement {
+    display: none;
+}
+
+.link-box::-webkit-scrollbar-button:horizontal:start:decrement {
+    background: white;
+    background: url("https://serafae.neocities.org/css/custom-scrollbars/scroll5.png"), 
+                linear-gradient(180deg, #e5e5e5, #f0f0f0 20%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto, cover;
+    border-radius: 3px;
+    border: 1.5px solid #888;
+}
+
+.link-box::-webkit-scrollbar-button:horizontal:end:increment {
+    background: white;
+    background: url("https://serafae.neocities.org/css/custom-scrollbars/scroll6.png"), 
+                linear-gradient(180deg, #e5e5e5, #f0f0f0 20%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto, cover;
+    border-radius: 3px;
+    border: 1.5px solid #888;
+}
+
 </style>
 
         <br>
