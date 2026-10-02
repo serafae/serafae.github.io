@@ -1,397 +1,88 @@
-<!DOCTYPE html>
-<!-- 
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⢻⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠟⠁⢸⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣤⣴⣶⣶⠾⠛⠁⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡾⠛⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⣿⡷⣦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠉⠙⠛⢷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣼⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⠁⠀⠀⠀⠀⠀⠈⠻⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⣠⣴⠾⠛⠋⠉⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢠⣾⠏⠁⠀⠀⠀⠀⠀⠙⠷⣦⣄⣀⣀⣀⣀⣀⣠⣴⡾⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣄⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⠙⠳⣦⡀⠀⠀⠀⠀
-⠀⠀⠀⣀⡴⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠏⠀⠀⠀⠘⣷⡄⠀⠀⠀
-⠀⣴⠟⠁⠀⠈⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡤⠖⠋⠀⠀⠀⠀⠀⠀⠘⣷⠀⠀⠀
-⣼⡏⠀⠀⠀⠀⠀⠈⠛⠷⢶⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣤⣤⡤⠶⠖⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀
-⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠙⠛⠋⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣆⠀⠀
-⢿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠟⠉⠙⢷⡀
-⠸⣿⠻⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠞⠁⠀⠀⠀⠘⣷
-⠀⠹⣧⡈⠉⠛⠷⠶⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣠⣤⡴⠶⠛⠉⠀⠀⠀⠀⠀⠀⠀⣿
-⠀⠀⠹⣷⡀⠀⠀⠀⠀⠀⠈⠉⠉⠙⠛⠛⠛⠿⠷⠶⠶⠶⠶⠶⠶⠶⠿⠿⠿⠛⠛⠛⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡿
-⠀⠀⠀⠘⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠟⠁
-⠀⠀⠀⠀⢻⡝⣧⠖⢦⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡶⢤⡴⠛⣲⡟⠋⠀⠀⠀
-⠀⠀⠀⠀⢸⡇⢹⠀⠘⡏⠙⡶⠒⢦⣀⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⡞⠛⡏⠀⠀⡇⢠⡿⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣿⠘⡆⠀⡇⠀⢸⠀⠸⡇⠀⠈⡷⠚⢳⣴⠶⣦⣀⡤⢤⣤⠶⢦⡞⠉⠉⡟⠀⢸⠁⠀⡇⠀⢸⠀⣾⠇⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢻⡇⢇⠀⢸⠀⢸⠀⠀⡇⠀⠀⣷⠀⠀⣿⠀⠸⡇⠀⢸⡇⠀⢸⡇⠀⢠⠇⠀⡼⠀⢸⠁⠀⡏⢸⡟⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠘⣷⢸⡀⠘⡆⠈⡇⠀⡇⠀⠀⣿⠀⠀⣿⠀⢸⠇⠀⢸⠃⠀⣸⠀⠀⣸⠀⢀⠇⠀⡎⠀⣸⢀⣿⠁⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢻⡇⢇⠀⢇⠀⣇⠀⢹⠀⠀⣿⠀⠀⡏⠀⢸⠀⠀⢸⠀⠀⡿⠀⠀⡇⠀⣸⠀⢰⠃⢀⠇⣼⠇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠈⣷⠚⠀⢸⡀⢹⠀⢸⠀⠀⢹⠀⠀⡇⠀⢸⠀⠀⡎⠀⢠⡇⠀⢸⠁⠀⡇⠀⡜⠀⣸⣰⡟⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢻⡇⠀⠀⠁⠸⡄⢸⡀⠀⢸⠀⠀⡇⠀⢸⠀⠀⡇⠀⢸⠀⠀⡞⠀⢸⠀⠀⠁⠀⠀⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠈⣿⡀⠀⠀⠀⠁⠀⠃⠀⢸⠀⠀⡇⠀⢸⠀⢀⠃⠀⡸⠀⠀⠇⠀⠉⠀⠀⠀⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠻⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠧⠀⡇⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠓⠦⢤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡤⠔⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠓⠒⠒⠶⠶⠶⠶⠖⠒⠒⠛⠉⠉⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-Sprinkles F2U Template by Lina (https://musictelevision.neocities.org/) ☆*:.｡.o(≧▽≦)o.｡.:*☆
--->
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sprinkles ༉‧₊˚</title>
-  <link rel="shortcut icon" href="https://files.catbox.moe/v04qj8.png">
-  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-<style>
-
-  @font-face {
-    font-family:basiic;
-    src:url(https://files.catbox.moe/jtvuhg.ttf);
-  }
-  #basiic {
-    font-family:basiic;
-  }
-    
-  @font-face {
-    font-family:sweetheart; /* extra font incase you dont like the basiic one */
-    src:url(https://files.catbox.moe/33n03y.ttf);
-  }
-  #sweetheart {
-    font-family:sweetheart;
-  }
-
-  * {
-    box-sizing: border-box;
-    image-rendering: pixelated;
-    line-height: 20px;
-  }
-
-  body {
-    animation: background 95s linear infinite;
-    background-color: lavenderblush;
-    background-image: url("https://files.catbox.moe/r0i1lp.gif");
-    background-position: center;
-    color: #6d5f54;
-    font-family: 'basiic';
-    font-size: 18px;
-    image-rendering: pixelated;
-  }
-
-  @keyframes background {
-    0%   { background-position: 0% 0%; }
-    100% { background-position: 100% 0%; }
-  }
-
-  #pinkborder {
-    border-image: url(https://files.catbox.moe/vpqkkx.png) 6 fill round;
-    border-style: solid;
-    border-width: 9px;
-    height: auto;
-    left: 50%;
-    position: relative;
-    top: 10px;
-    transform: translateX(-50%);
-    width: 850px;
-  }
-
-  #box {
-    background: url(https://i.pinimg.com/736x/58/82/21/588221f123c8e37a0dfa0f2b4164b93d.jpg);
-    background-size: cover;
-    border: 3px solid lightgrey;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: auto;
-    width: 100%;
-  }
-
-  #box a {
-    color: blue;
-    text-decoration: none;
-  }
-
-  #box a:hover {
-    color: hotpink;
-    font-style: italic;
-    font-weight: bold;
-    text-decoration: none;
-    transform: scale(1.12);
-  }
-
-  #headercontainer {
-    background-image: url('https://i.pinimg.com/1200x/3e/be/ed/3ebeedd4cd6c089b82dc26c263e93aca.jpg');
-    background-position: center;
-    background-size: cover;
-    border: 3px solid lightgrey;
-    border-radius: 30px 30px 0px 0px;
-    box-shadow: 0 0 13px 13px white inset;
-    font-weight: 600;
-    height: 34vh;
-    position: relative;
-    width: 100%;
-  }
-
-  #box-footer {
-    background: linear-gradient(80deg, #ffc7d1, #ffd5b8, #fffbd4, #e2ffd9, #d8f3ff, #d6dcff, #ebd4ff, #ffd6f0);
-    border: 3px solid lightgrey;
-    border-radius: 0px 0px 10px 10px;
-    border-top: 0px;
-    color: pink;
-    font-family: 'basiic';
-    font-size: 13px;
-    font-weight: 600;
-    padding: 10px 7px 10px;
-    text-align: center;
-    text-shadow: 2px 1px white;
-  }
-
-  #box-footer a {
-    color: blue;
-    text-decoration: none;
-  }
-
-  #box-footer a:hover {
-    color: hotpink;
-    font-style: italic;
-    font-weight: bold;
-    text-decoration: none;
-    transform: scale(1.12);
-  }
-
-  .header-text {
-    color: lightblue;
-    left: 10px;
-    padding-top: 10px;
-    position: absolute;
-    text-align: left;
-    text-shadow: 2px 1px white;
-    top: 20px;
-  }
-
-  .header-text h1 {
-    font-family: Garamond;
-    font-size: 55px;
-    margin: 0;
-  }
-
-  .header-text p {
-    font-size: 14px;
-    margin: 4px 0;
-  }
-
-  .navstrip {
-    align-items: stretch;
-    background: lavenderblush;
-    border-bottom: 0px solid lightgrey;
-    display: flex;
-    font-style: italic;
-    justify-content: space-between;
-    overflow: hidden;
-    padding: 0;
-    width: 100%;
-  }
-
-  .navstrip a {
-    align-items: center;
-    background-color: lavenderblush;
-    border: 1px solid pink;
-    color: hotpink;
-    display: flex;
-    flex: 1;
-    font-family: Garamond;
-    font-size: 14px;
-    font-weight: bold;
-    height: 100%;
-    justify-content: center;
-    padding: 10px 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 1px 1px white;
-  }
-
-  .navstrip a:hover {
-    background-color: #ffe6ee;
-    font-weight: bold;
-    text-decoration: none;
-    transform: scale(1.12);
-    z-index: 1;
-  }
-
-  .straightrainbowbar {
-    background: linear-gradient(80deg, #ffc7d1, #ffd5b8, #fffbd4, #e2ffd9, #d8f3ff, #d6dcff, #ebd4ff, #ffd6f0);
-    border-bottom: 1px dotted red;
-    border-top: 1px dotted red;
-    color: #6d5f54;
-    font-family: Garamond;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 7px;
-    text-shadow: 2px 1px lavenderblush;
-  }
-
-  .straightrainbowbar-header {
-    background: linear-gradient(80deg, #ffc7d1, #ffd5b8, #fffbd4, #e2ffd9, #d8f3ff, #d6dcff, #ebd4ff, #ffd6f0);
-    border-bottom: 1px dotted red;
-    border-radius: 30px;
-    border-top: 1px dotted red;
-    color: #6d5f54;
-    font-family: Garamond;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-    padding: 7px 0;
-    position: sticky;
-    text-align: center;
-    text-shadow: 2px 1px lavenderblush;
-    top: 0;
-    z-index: 10;
-  }
-
-  .topmarq {
-    background: linear-gradient(to bottom, rgba(254,250,254,1) 0%, rgba(254,232,247,1) 50%, rgba(254,224,244,1) 51%, rgba(255,219,244,1) 100%);
-    border: 3px solid lightgrey;
-    border-bottom: 0;
-    border-top: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  .topmarq-inner {
-    align-items: center;
-    display: flex;
-    font-style: italic;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .marquee-left {
-    color: hotpink;
-    flex: 1;
-    font-family: 'basiic';
-    font-size: 20px;
-    overflow: hidden;
-    padding: 10px;
-    white-space: nowrap;
-  }
-
-  .marquee-right {
-    background: linear-gradient(to bottom, rgba(254,251,250,1) 0%, rgba(254,246,232,1) 50%, rgba(254,245,224,1) 51%, rgba(255,242,219,1) 100%);
-    border-left: 3px solid lightgrey;
-    color: lightsalmon;
-    font-size: 15px;
-    padding: 7px;
-    white-space: nowrap;
-  }
-
-  .box-sections {
-    box-sizing: border-box;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    width: 100%;
-  }
-
-  .left-col,
-  .mid-col,
-  .right-col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .left-col,
-  .right-col {
-    flex: 1;
-  }
-
-  .mid-col {
-    flex: 2;
-  }
-
-  .inner-box {
-    background: lavenderblush;
-    border: 2px solid lightgrey;
-    border-radius: 5px;
-    box-shadow: inset 0 0 4px #ffffff;
-    min-height: 100px;
-    overflow: visible;
-    padding: 10px;
-    text-align: justify;
-  }
-
-  .inner-box-text {
-    margin-top: 6px;
-    overflow-y: scroll;
-    width: 100%;
-  }
-
-  ::selection {
-    background: hotpink;
-    color: lavenderblush;
-  }
-  
-</style>
-</head>
-<body>
+  <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+   Sprinkles ༉‧₊˚
+  </title>
+  <link href="https://files.catbox.moe/v04qj8.png" rel="shortcut icon">
+  <link href="./sparkles.css" media="all" rel="stylesheet" type="text/css">
+  <script defer="true" src="./sparkles.js">
+  </script>
+ </head>
+ <body>
   <div id="pinkborder">
-    <!-- HEADER -->
-    <div id="headercontainer">
-      <div class="header-text">
-        <h1>SPRINKLES F2U TEMPLATE</h1>
-        <p>info ♡ info <br> info ♡ info</p>
-        <p>✎ You can change the title, background, and header image here!</p>
+   <!-- HEADER -->
+   <div id="headercontainer">
+    <div class="header-text">
+     <h1>
+      SPRINKLES F2U TEMPLATE
+     </h1>
+     <p>
+      info ♡ info
+      <br>
+      info ♡ info
+     </p>
+     <p>
+      ✎ You can change the title, background, and header image here!
+     </p>
+    </div>
+   </div>
+   <!-- TOP MARQUEE SECTION -->
+   <div class="topmarq">
+    <div class="topmarq-inner">
+     <div class="marquee-left">
+      <!-- you can change the direction to left, right, or change the BEHAVIOR to alternate ! -->
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+       ⋅˚₊‧ ୨Change this marquee to blinkes, stamps, text, whatever you'd like!୧ ‧₊˚ ⋅
+      </marquee>
+     </div>
+     <div class="marquee-right">
+      <div class="marquee-right-inner">
+       <img src="https://files.catbox.moe/4b65jg.gif">
+       <!-- marquee-right resizes with whatever you put in it! change to a clap button, view counter, music player? whatever! ^__^ -->
+       <div class="clock" id="clock">
+       </div>
       </div>
+     </div>
     </div>
-
-    <!-- TOP MARQUEE SECTION -->
-    <div class="topmarq">
-      <div class="topmarq-inner">
-        <div class="marquee-left">
-          <!-- you can change the direction to left, right, or change the BEHAVIOR to alternate ! -->
-          <marquee behavior="scroll" direction="left" scrollamount="6">
-            ⋅˚₊‧ ୨Change this marquee to blinkes, stamps, text, whatever you'd like!୧ ‧₊˚ ⋅
-          </marquee>
-        </div>
-
-        <div class="marquee-right">
-          <div style="display:inline-flex; align-items:center; gap:6px;">
-            <img src="https://files.catbox.moe/4b65jg.gif">
-            <!-- marquee-right resizes with whatever you put in it! change to a clap button, view counter, music player? whatever! ^__^ -->
-            <div id="clock" style="font:14px Garamond; color: red;"></div>
-          </div>
-          <script>
-            setInterval(() => {
-              let d = new Date(), h = d.getHours(), m = d.getMinutes(), s = d.getSeconds();
-              clock.textContent = [h, m, s].map(n => n.toString().padStart(2, 0)).join(':');
-            }, 999);
-          </script>
-        </div>
+   </div>
+   <!-- RAINBOW DIVIDER -->
+   <div class="straightrainbowbar">
+   </div>
+   <!-- you can also have text in these straightrainbowbar's if you'd like! i just like the look of it plain as a divider for here!! -->
+   <!-- NAVIGATION BAR -->
+   <div class="navstrip">
+    <a href="#">
+     Neocities
+    </a>
+    <a href="#">
+     About
+    </a>
+    <a href="#">
+     Diary
+    </a>
+    <a href="#">
+     Gallery
+    </a>
+    <a href="#">
+     Links
+    </a>
+    <a href="#">
+     Credits
+    </a>
+   </div>
+   <!-- MAIN BOX SECTION -->
+   <div id="box">
+    <div class="box-sections">
+     <!-- LEFT COLUMN -->
+     <div class="left-col">
+      <div class="inner-box left-top">
+       Left Top
       </div>
-    </div>
-
-    <!-- RAINBOW DIVIDER -->
-    <div class="straightrainbowbar" style="border-left: 3px solid lightgrey; border-right: 3px solid lightgrey;"></div>
-    <!-- you can also have text in these straightrainbowbar's if you'd like! i just like the look of it plain as a divider for here!! -->
-
-    <!-- NAVIGATION BAR -->
-    <div class="navstrip" style="border-left: 3px solid lightgrey; border-right: 3px solid lightgrey;">
-      <a href="/#.html">Neocities</a>
-      <a href="/#.html">About</a>
-      <a href="/#.html">Diary</a>
-      <a href="/#.html">Gallery</a>
-      <a href="/#.html">Links</a>
-      <a href="/#.html">Credits</a>
-    </div>
-    
-    <!-- MAIN BOX SECTION -->
-    <div id="box">
-      <div class="box-sections">
-
-        <!-- LEFT COLUMN -->
-        <div class="left-col">
-          <div class="inner-box" style="overflow-y:scroll;height: 260px;">Left Top</div>
-          <div class="inner-box" style="height: 120px;">
-            <marquee behavior="scroll" direction="up" scrollamount="6" style="text-align: center; height: 100%;">
-              <img src="https://64.media.tumblr.com/837bfea6488442365b367b4a8a6affe8/a9f83b6af483b6c3-db/s100x200/f33fb547a3c4f8309c03a80e4e4d1c5c9759e48e.pnj">
+      <div class="inner-box left-marquee">
+       <marquee behavior="scroll" direction="up" scrollamount="6" style="text-align: center; height: 100%;">
+        <img src="https://64.media.tumblr.com/837bfea6488442365b367b4a8a6affe8/a9f83b6af483b6c3-db/s100x200/f33fb547a3c4f8309c03a80e4e4d1c5c9759e48e.pnj">
         <img src="https://64.media.tumblr.com/b4522fb77878b1d98097b82e892e6808/7bc42926807a6a25-0d/s100x200/6c78048ae9d8da0a703919906beaa4e46dbebf1e.webp">
         <img src="https://64.media.tumblr.com/c4d0dce48864b3dd8d811c0770b416d1/dd851ed67dd48774-1c/s100x200/e8a6fdccb11d8719bd11e7f30bb7883309a61d5d.gifv">
         <img src="https://64.media.tumblr.com/19debbca26ba5cfc9a74b26c1969b8a4/a1e023b4064e88eb-fc/s100x200/68b48b2485dfdc6b025b3f60cbcc7decbb0376df.pnj">
@@ -399,69 +90,92 @@ Sprinkles F2U Template by Lina (https://musictelevision.neocities.org/) ☆*:.�
         <img src="https://64.media.tumblr.com/5c8a97c61135adfd6d337430ad57c651/aeaf1170854d27dc-33/s100x200/f2f69a2d20e03ae4977d2e9adaee58cc068689e1.gifv">
         <img src="https://64.media.tumblr.com/913391a3c762b94a2c8c275258ed47ad/1b655208f61940ad-d3/s100x200/e2de430f6e52912926f683d09ec78ab591bd89a3.pnj">
         <img src="https://64.media.tumblr.com/83f8b890b40699430854cf9377cf2eec/8bc2ea6d5dd00a56-29/s100x200/dd395288dd0f4f38be8c1b0956d78b4275ba400a.gifv">
-            </marquee>
-          </div>
-        </div>
-        
-        <!-- MIDDLE COLUMN -->
-        <div class="mid-col">
-          <div class="inner-box" style="height: 100%;">
-            <div class="straightrainbowbar-header">Middle</div>
-            <div class="inner-box-text" style="height: 324px;">
-              <span style="font-family: Garamond; color:red; text-transform: uppercase;">Disclaimer:</span><br>
-        <p>This is my FIRST EVER F2U INDEX LAYOUT!!! :DD I'm super excited—yaaay!~  
-        Please keep in mind that I’m not a professional at all, and my code can be a little messy. I really tried to make this as beginner-friendly as possible. Hopefully, everything makes sense and is clearly explained!</p>
-        
-        <p>Some parts aren’t labeled because I think it's fun to explore and figure things out on your own. Trial and error is a HUGE part of coding!! without it, the indie web wouldn’t even exist!</p>
-        
-        <p>I made this on my Apple MacBook Air, so I’m not sure how it will look on Windows (especially with their default scrollbars). You might want to disable them or search for a cute F2U scrollbar code! just Google it, and you’ll find something :3</p>
-        
-        <center><img src="https://64.media.tumblr.com/700e39792f85b25d1f04abdab2a51b26/e87ce4147c394776-5f/s400x600/173b2d2b8ca34b1168b085e506106f58480c07b0.pnj" width="100"></center>
-        
-        <p>I’m so excited to see what people do with this template, and I can’t wait to make more cute themes! If you use this, please LMK, I’d love to see how you made it your own! :D  
-        Feel free to change the colors, images, and overall aesthetic to whatever palette or vibe you’d like!</p>
-        
-        <p>BTW I don’t publicly share my email online, but you’re welcome to reach out to me through my <a href="https://musictelevision.neocities.org/">website</a> if you need help.  
-        That said, please try Googling your question, asking a friend, or checking out a web dev forum or Discord server before contacting me, You might be bale to figure it out without anyones help! ^_^  I also don’t know how many people will be using this.. if anyone at all :,) lol. but TRUST ME I love to help!</p>
-        
-        <p>This template is just for fun and made to be edited however your heart desires!~  Happy Coding!!!</p>
-        
-        <center><span style="font-family: Garamond; color:red; text-transform: uppercase;">!!!do not remove the credit!!!</span></center>
-            </div>
-          </div>
-        </div>
-    
-        <!-- RIGHT COLUMN -->
-        <div class="right-col">
-          <!-- you can change the height to whatever you want! just know that it will change the #box's overall height to make room for it! -->
-          <div class="inner-box" style="height: 120px;overflow-y:scroll;">Right Top</div>
-          <div class="inner-box" style="height: 260px;overflow-y:scroll;">Right Bottom</div>
-        </div>
-
+       </marquee>
       </div>
+     </div>
+     <!-- MIDDLE COLUMN -->
+     <div class="mid-col">
+      <div class="inner-box middle-box">
+       <div class="straightrainbowbar-header">
+        Middle
+       </div>
+       <div class="inner-box-text">
+        <span style="font-family: Garamond; color:red; text-transform: uppercase;">
+         Disclaimer:
+        </span>
+        <br>
+        <p>
+         This is my FIRST EVER F2U INDEX LAYOUT!!! :DD I'm super excited—yaaay!~  
+        Please keep in mind that I’m not a professional at all, and my code can be a little messy. I really tried to make this as beginner-friendly as possible. Hopefully, everything makes sense and is clearly explained!
+        </p>
+        <p>
+         Some parts aren’t labeled because I think it's fun to explore and figure things out on your own. Trial and error is a HUGE part of coding!! without it, the indie web wouldn’t even exist!
+        </p>
+        <p>
+         I made this on my Apple MacBook Air, so I’m not sure how it will look on Windows (especially with their default scrollbars). You might want to disable them or search for a cute F2U scrollbar code! just Google it, and you’ll find something :3
+        </p>
+        <center>
+         <img class="middle-image" src="https://64.media.tumblr.com/700e39792f85b25d1f04abdab2a51b26/e87ce4147c394776-5f/s400x600/173b2d2b8ca34b1168b085e506106f58480c07b0.pnj">
+        </center>
+        <p>
+         I’m so excited to see what people do with this template, and I can’t wait to make more cute themes! If you use this, please LMK, I’d love to see how you made it your own! :D  
+        Feel free to change the colors, images, and overall aesthetic to whatever palette or vibe you’d like!
+        </p>
+        <p>
+         BTW I don’t publicly share my email online, but you’re welcome to reach out to me through my
+         <a href="https://musictelevision.neocities.org/">
+          website
+         </a>
+         if you need help.  
+        That said, please try Googling your question, asking a friend, or checking out a web dev forum or Discord server before contacting me, You might be bale to figure it out without anyones help! ^_^  I also don’t know how many people will be using this.. if anyone at all :,) lol. but TRUST ME I love to help!
+        </p>
+        <p>
+         This template is just for fun and made to be edited however your heart desires!~  Happy Coding!!!
+        </p>
+        <center>
+         <span style="font-family: Garamond; color:red; text-transform: uppercase;">
+          !!!do not remove the credit!!!
+         </span>
+        </center>
+       </div>
+      </div>
+     </div>
+     <!-- RIGHT COLUMN -->
+     <div class="right-col">
+      <!-- you can change the height to whatever you want! just know that it will change the #box's overall height to make room for it! -->
+      <div class="inner-box right-top">
+       Right Top
+      </div>
+      <div class="inner-box right-bottom">
+       Right Bottom
+      </div>
+     </div>
     </div>
-
-    <!-- FOOTER -->
-    <div id="box-footer">
-      Cute Lil <a href="#">Footer</a> For You!~
-    </div>
+   </div>
+   <!-- FOOTER -->
+   <div id="box-footer">
+    Cute Lil
+    <a href="#">
+     Footer
+    </a>
+    For You!~
+   </div>
   </div>
-  
-    <!-- !!!CREDITS. DO NOT REMOVE!!! -->
-<div style="font-size:10px;font-style:italic;color:white;width:100%;margin-top:10px;text-align:center;">
-  <mark style="background-color:lavenderblush;">
-    website design c. <a href="https://musictelevision.neocities.org" style="color:hotpink;">Lina</a>
-  </mark>
-</div>
-
-
+  <!-- !!!CREDITS. DO NOT REMOVE!!! -->
+  <div class="credits">
+   <mark>
+    website design c.
+    <a href="https://musictelevision.neocities.org">
+     Lina
+    </a>
+   </mark>
+  </div>
   <!-- OPTIONAL CORNER IMAGE -->
-  <div style="position: fixed; right: 1px; bottom: 9px; z-index: 200; max-height: 400px;">
-    <img src="https://files.catbox.moe/vma6gi.gif" width="200" height="200"/>
+  <div class="corner-image">
+   <img src="https://files.catbox.moe/vma6gi.gif">
+   
   </div>
-
-
-<!-- 
+  <!-- 
 if you want 2 boxes instead of 1 big box in the middle column, replace with this! I couldn't decide on what to give you so im adding both C: 
 copy ALL of THIS and plug it into the <div class="mid-col"> </div> area! 
 
@@ -480,26 +194,12 @@ copy ALL of THIS and plug it into the <div class="mid-col"> </div> area!
       </div>
       </div>
 -->
-
-
-
-
   <!-- CURSOR IMAGE FOLLOW SCRIPT -->
   <div id="containerCursor">
-    <img id="imagineCursor" style="z-index: 9999; position: absolute; padding:15px; pointer-events:none;" src="https://files.catbox.moe/x262d7.gif"> <!-- change src to any image you want! -->
+   <img id="imagineCursor" src="https://files.catbox.moe/x262d7.gif">
+   <!-- change src to any image you want! -->
   </div>
-  <script>
-    const cursorImg = document.getElementById("imagineCursor");
-    const cursorContainer = document.getElementById("containerCursor");
-    document.addEventListener("mousemove", (e) => {
-      cursorContainer.style.display = "block";
-      cursorImg.style.left = e.pageX + "px";
-      cursorImg.style.top = e.pageY + "px";
-    });
-    document.addEventListener("mouseleave", () => {
-      cursorContainer.style.display = "none";
-    });
-  </script>
+ 
+
 </body>
 </html>
-        
