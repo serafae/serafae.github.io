@@ -1,0 +1,297 @@
+html {
+  /* feel free to delete this if you just want the normal cursor! */
+}
+
+body {
+  background: 
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+    url('https://serafae.neocities.org/images/backgrounds/pink/pinkmusicnotesbg01.png') center center / cover no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  font-size: 19px;
+  line-height: 25px;
+  word-spacing: 4px;
+  font-family: 'Griffiths', serif;
+  color: #323232;
+}
+
+mark {
+  background: #ffff00;
+}
+
+#wrapper-index {
+  background: 
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+    url('https://serafae.neocities.org/images/backgrounds/pink/ribbon_background_noir_pink.png') center/cover no-repeat;
+  position: relative;
+  margin: 30px auto 35px;
+  width: 1108px;
+  max-width: 95vw;          /* ← already helps a bit on medium screens */
+  padding: 20px 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #222;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+}
+
+/* Binder spiral */
+#tab1-wrapper:after,
+#tab2-wrapper:after,
+#tab3-wrapper:after,
+#tab4-wrapper:after,
+#tab5-wrapper:after,
+#tab6-wrapper:after,
+#tab7-wrapper:after,
+#tab8-wrapper:after {
+  content: url(https://serafae.neocities.org/assets/personal+icons/icons/pink_binder_spiral.png);
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+}
+
+/* PAGES */
+.paper {
+  background: url('https://serafae.neocities.org/assets/personal+icons/icons/leaf-loose-paper-pink.png');
+  z-index: 5;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid lightgrey;
+  height: 600px;
+}
+
+.left {
+  width: 490px;
+  margin-left: 50px;
+  margin-right: 10px;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+}
+
+.left-in {
+  padding: 15px 10px 15px 25px;
+  height: 100%;
+  margin-right: 15px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.right {
+  padding: 15px 25px;
+  width: 490px;
+  margin-left: 10px;
+  border-radius: 0 10px 10px 0;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+/* Specific tab paper styles */
+.tab2-p {
+  font-family: 'Griffiths', serif;
+  font-size: 19px;
+  background: url('https://serafae.neocities.org/assets/personal+icons/icons/leaf-loose-paper-pink.png');
+  border-color: lightgrey;
+}
+
+/* TAB BUTTONS */
+.tab {
+  width: 590px;
+  height: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  rotate: -90deg;
+  top: -10px;
+  left: -232px;
+}
+
+.tab2 {
+  width: 590px;
+  height: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  rotate: 90deg;
+  top: 590px;
+  right: -232px;
+}
+
+.tab button,
+.tab2 button {
+  z-index: 1;
+  position: relative;
+  vertical-align: top;
+  width: 120px;
+  margin: 0 8px;
+  padding: 10px 0 30px;
+  font-family: 'Parode';
+  cursor: url('https://serafae.neocities.org/assets/misc-buttons/cursors/pinkprecision.webp');
+  font-size: 17px;
+  transition-duration: 0.5s;
+  top: 10px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #ffdbf0;
+}
+
+/* Tab colors */
+.tab1-b, .tab2-b, .tab3-b, .tab4-b,
+.tab5-b, .tab6-b, .tab7-b, .tab8-b {
+  background: radial-gradient(circle, rgba(255,240,248,1) 14%, rgba(255,154,225,1) 91%);
+}
+
+.tab button:hover,
+.tab2 button:hover {
+  top: 0;
+  cursor: grab;
+}
+
+.tab button.active,
+.tab2 button.active {
+  top: 0;
+  cursor: grabbing;
+  box-shadow: 1px 1px 20px 1px rgba(255,210,242);
+  outline: none;
+}
+
+/* Make images inside the notebook responsive */
+.paper img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablets & smaller desktops */
+@media (max-width: 1150px) {
+  #wrapper-index {
+    width: 95vw;
+    padding: 15px 8px;
+  }
+
+  .left, .right {
+    width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .left {
+    margin-left: 3%;
+  }
+
+  .tab {
+    left: -200px;
+  }
+
+  .tab2 {
+    right: -200px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  #wrapper-index {
+    width: 96vw;
+    margin: 15px auto;
+    padding: 12px 6px 20px;
+    border-radius: 12px;
+  }
+
+  /* Stack the two pages vertically */
+  .paper {
+    display: block;
+    width: 100% !important;
+    height: auto;
+    min-height: 400px;
+    margin: 0 0 15px 0 !important;
+    border-radius: 10px !important;
+  }
+
+  .left {
+    border-radius: 10px 10px 0 0 !important;
+  }
+
+  .right {
+    border-radius: 0 0 10px 10px !important;
+    margin-top: -1px; /* seamless look */
+  }
+
+  .left-in {
+    padding: 15px;
+    margin-right: 0;
+    height: auto;
+  }
+
+  /* Hide the side spiral on mobile (it looks broken when stacked) */
+  #tab1-wrapper:after,
+  #tab2-wrapper:after,
+  #tab3-wrapper:after,
+  #tab4-wrapper:after,
+  #tab5-wrapper:after,
+  #tab6-wrapper:after,
+  #tab7-wrapper:after,
+  #tab8-wrapper:after {
+    display: none;
+  }
+
+  /* Move tabs to the top as a horizontal scrollable bar */
+  .tab,
+  .tab2 {
+    position: static;
+    transform: none;
+    rotate: 0deg;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 0;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+
+  .tab button,
+  .tab2 button {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 90px;
+    padding: 10px 14px;
+    margin: 0;
+    top: 0 !important;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  /* Optional: make the active tab more obvious on mobile */
+  .tab button.active,
+  .tab2 button.active {
+    box-shadow: 0 0 12px 2px rgba(255, 180, 220, 0.8);
+  }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  body {
+    font-size: 15px;
+  }
+
+  .tab button,
+  .tab2 button {
+    min-width: 80px;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
