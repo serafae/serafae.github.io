@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>page not found</title>
- <style>
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -13,14 +13,12 @@
 
     body {
       background-color: #000;
-      /* ↓↓↓ Your 1920x1080 image ↓↓↓ */
       background-image: url('https://serafae.neocities.org/images/backdrops/cv01_miku.png');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
       background-attachment: fixed;
 
-      color: #7EE7F2;
       min-height: 100vh;
       font-family: sans-serif; /* replace with your own font */
       display: flex;
@@ -29,34 +27,48 @@
       overflow-x: hidden;
     }
 
+    /* Shared gradient + white outline */
+    .gradient-text {
+      background: #51d6c2;
+      background: radial-gradient(circle, rgba(81, 214, 194, 1) 0%, rgba(87, 199, 177, 1) 15%, rgba(147, 245, 203, 1) 71%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: none; /* reset, we re-apply outline separately */
+    }
+
     /* Return button */
     .return {
       position: fixed;
       top: 28px;
       left: 28px;
-      color: #7EE7F2;
       text-decoration: none;
       font-size: 1rem;
       letter-spacing: 1px;
       opacity: 0.85;
       transition: all 0.3s ease;
       z-index: 10;
-      text-shadow: 
-        -1px -1px 0 #fff,
-         1px -1px 0 #fff,
-        -1px  1px 0 #fff,
-         1px  1px 0 #fff;
+
+      /* gradient */
+      background: radial-gradient(circle, rgba(81, 214, 194, 1) 0%, rgba(87, 199, 177, 1) 15%, rgba(147, 245, 203, 1) 71%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+
+      /* white outline */
+      filter: drop-shadow(-1px -1px 0 #fff) 
+              drop-shadow(1px -1px 0 #fff) 
+              drop-shadow(-1px 1px 0 #fff) 
+              drop-shadow(1px 1px 0 #fff);
     }
 
     .return:hover {
       opacity: 1;
-      text-shadow: 
-        -1px -1px 0 #fff,
-         1px -1px 0 #fff,
-        -1px  1px 0 #fff,
-         1px  1px 0 #fff,
-         0 0 12px #7EE7F2,
-         0 0 24px #7EE7F2;
+      filter: drop-shadow(-1px -1px 0 #fff) 
+              drop-shadow(1px -1px 0 #fff) 
+              drop-shadow(-1px 1px 0 #fff) 
+              drop-shadow(1px 1px 0 #fff)
+              drop-shadow(0 0 8px rgba(81, 214, 194, 0.8));
     }
 
     /* Layout */
@@ -81,37 +93,53 @@
       font-weight: 500;
       margin-bottom: 10px;
       letter-spacing: 1px;
-      text-shadow: 
-        -1.5px -1.5px 0 #fff,
-         1.5px -1.5px 0 #fff,
-        -1.5px  1.5px 0 #fff,
-         1.5px  1.5px 0 #fff;
+
+      background: radial-gradient(circle, rgba(81, 214, 194, 1) 0%, rgba(87, 199, 177, 1) 15%, rgba(147, 245, 203, 1) 71%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+
+      /* white outline */
+      filter: drop-shadow(-1.5px -1.5px 0 #fff) 
+              drop-shadow(1.5px -1.5px 0 #fff) 
+              drop-shadow(-1.5px 1.5px 0 #fff) 
+              drop-shadow(1.5px 1.5px 0 #fff);
     }
 
     .text p {
       font-size: 1rem;
-      opacity: 0.85;
+      opacity: 0.9;
       line-height: 1.5;
-      text-shadow: 
-        -1px -1px 0 #fff,
-         1px -1px 0 #fff,
-        -1px  1px 0 #fff,
-         1px  1px 0 #fff;
+
+      background: radial-gradient(circle, rgba(81, 214, 194, 1) 0%, rgba(87, 199, 177, 1) 15%, rgba(147, 245, 203, 1) 71%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+
+      filter: drop-shadow(-1px -1px 0 #fff) 
+              drop-shadow(1px -1px 0 #fff) 
+              drop-shadow(-1px 1px 0 #fff) 
+              drop-shadow(1px 1px 0 #fff);
     }
 
-    /* Big 404 on the right */
+    /* Big 404 */
     .code {
       font-size: clamp(8rem, 20vw, 15rem);
       font-weight: 700;
       line-height: 1;
       position: relative;
-      color: #7EE7F2;
       flex-shrink: 0;
-      text-shadow: 
-        -2px -2px 0 #fff,
-         2px -2px 0 #fff,
-        -2px  2px 0 #fff,
-         2px  2px 0 #fff;
+
+      background: radial-gradient(circle, rgba(81, 214, 194, 1) 0%, rgba(87, 199, 177, 1) 15%, rgba(147, 245, 203, 1) 71%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+
+      /* white outline */
+      filter: drop-shadow(-2px -2px 0 #fff) 
+              drop-shadow(2px -2px 0 #fff) 
+              drop-shadow(-2px 2px 0 #fff) 
+              drop-shadow(2px 2px 0 #fff);
     }
 
     /* Glitch */
@@ -133,14 +161,14 @@
 
     .glitch::before {
       left: 2px;
-      text-shadow: -2px 0 #7EE7F2;
+      text-shadow: -2px 0 #51d6c2;
       animation: glitchA 2.8s infinite linear alternate-reverse;
       opacity: 0.8;
     }
 
     .glitch::after {
       left: -2px;
-      text-shadow: 2px 0 #7EE7F2;
+      text-shadow: 2px 0 #93f5cb;
       animation: glitchB 2.2s infinite linear alternate-reverse;
       opacity: 0.7;
     }
@@ -178,14 +206,14 @@
 
       .code {
         font-size: clamp(6.5rem, 26vw, 10rem);
-        margin-top: 10vh; /* keeps 404 a bit higher */
+        margin-top: 10vh;
       }
 
       .text {
         max-width: 100%;
         text-align: center;
-        margin-top: auto;          /* ← pushes text to the very bottom */
-        padding-bottom: 20px;
+        margin-top: auto;
+        padding-bottom: 10px;
       }
 
       .return {
@@ -209,6 +237,7 @@
       <span class="glitch">404</span>
     </div>
   </div>
+
 
 </body>
 </html>
