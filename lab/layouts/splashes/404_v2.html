@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, sans-serif; /* replace with your fonts */
+      overflow-x: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Return button - top left corner */
+    .return-btn {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      z-index: 100;
+      background: transparent;
+      border: 1.5px solid #3b82f6;
+      color: #3b82f6;
+      padding: 10px 22px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border-radius: 4px;
+    }
+
+    .return-btn:hover {
+      background: #3b82f6;
+      color: #000;
+      box-shadow: 0 0 18px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Main layout */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      padding: 40px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .content {
+      flex: 1;
+      max-width: 480px;
+    }
+
+    .content h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #e0e7ff;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin-bottom: 32px;
+    }
+
+    /* Big 404 on the right */
+    .error-code {
+      flex-shrink: 0;
+      font-size: clamp(7rem, 22vw, 16rem);
+      font-weight: 800;
+      line-height: 1;
+      color: #3b82f6;
+      position: relative;
+      user-select: none;
+    }
+
+    /* Glitch effect */
+    .glitch {
+      position: relative;
+      display: inline-block;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+
+    .glitch::before {
+      left: 3px;
+      text-shadow: -3px 0 #22d3ee;
+      clip-path: inset(0 0 0 0);
+      animation: glitch-1 2.4s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+      left: -3px;
+      text-shadow: 3px 0 #a855f7;
+      clip-path: inset(0 0 0 0);
+      animation: glitch-2 3s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch-1 {
+      0%   { clip-path: inset(20% 0 60% 0); transform: translate(-3px, 2px); }
+      20%  { clip-path: inset(50% 0 20% 0); transform: translate(3px, -1px); }
+      40%  { clip-path: inset(10% 0 70% 0); transform: translate(-2px, 3px); }
+      60%  { clip-path: inset(70% 0 5% 0);  transform: translate(4px, -2px); }
+      80%  { clip-path: inset(30% 0 40% 0); transform: translate(-1px, 1px); }
+      100% { clip-path: inset(5% 0 80% 0);  transform: translate(2px, -3px); }
+    }
+
+    @keyframes glitch-2 {
+      0%   { clip-path: inset(60% 0 15% 0); transform: translate(3px, -2px); }
+      20%  { clip-path: inset(15% 0 55% 0); transform: translate(-4px, 1px); }
+      40%  { clip-path: inset(75% 0 5% 0);  transform: translate(2px, 3px); }
+      60%  { clip-path: inset(25% 0 50% 0); transform: translate(-3px, -1px); }
+      80%  { clip-path: inset(45% 0 25% 0); transform: translate(1px, 2px); }
+      100% { clip-path: inset(5% 0 70% 0);  transform: translate(-2px, -3px); }
+    }
+
+    /* Subtle blue glow behind the number */
+    .error-code::after {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+        padding-top: 80px; /* space for the fixed button */
+      }
+
+      .content {
+        max-width: 100%;
+      }
+
+      .error-code {
+        font-size: clamp(6rem, 28vw, 10rem);
+      }
+
+      .return-btn {
+        top: 16px;
+        left: 16px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .return-btn {
+        top: 12px;
+        left: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="/" class="return-btn">← Return</a>
+
+  <div class="container">
+    <div class="content">
+      <h1>Page not found</h1>
+      <p>The page you’re looking for doesn’t exist or has been moved. Let’s get you back on track.</p>
+    </div>
+
+    <div class="error-code">
+      <span class="glitch" data-text="404">404</span>
+    </div>
+  </div>
+
+</body>
+</html>
