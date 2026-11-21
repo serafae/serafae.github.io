@@ -1,0 +1,29 @@
+ ⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣠⡾⠋⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠙⢷⣄⠀⠀⠀⠀⠀
+⠀⠀⠀⣠⡾⠋⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠙⢷⣄⠀⠀⠀
+⠀⢠⡾⠋⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠙⢷⡄⠀
+⠀⢸⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⡇⠀
+⠀⢸⡇⢸⠟⢁⣀⣉⣹⣉⡉⠉⢉⣉⡿⠋⢁⣀⠉⠻⣿⠉⢉⣉⠉⠻⡇⢸⡇⠀
+⠀⢸⡇⢸⣄⡈⠉⠙⢻⣿⣿⠀⢸⣿⡇⠀⣿⣿⡇⠀⣿⠀⠘⠛⠁⢠⡇ ⢸⡇⠀
+⠀⢸⡇⢸⡛⠛⠟⠂⢰⣿⣿⠀⢸⣿⣧⡀⠙⠟⠁⣠⣿⠀⢸⣿⣿⣿⡇ ⢸⡇⠀
+⠀⢸⡇⢸⣿⣷⣶⣾⣿⣿⣿⣶⣿⣿⣿⣿⣷⣶⣿⣿⣿⣷⣾⣿⣿⣿⡇⢸⡇⠀
+⠀⠘⢷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣠⡾⠃⠀
+⠀⠀⠀⠙⢷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣠⡾⠋⠀⠀⠀
+⠀⠀⠀⠀⠀⠙⢷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣠⡾⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠙⢷⣄⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣠⡾⠋⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+Prohibition on Generative AI and Unauthorized Use of Original Content
+
+I expressly prohibit the use of generative AI tools, artificial intelligence systems, or machine learning technologies to scrape, analyze, trace, reproduce, imitate, replicate, adapt, or create derivative works from any of my original writing, artwork, or creative content. My creations are original, personal, and attributable to me. No permission is granted to use them for any such purpose.
+
+Furthermore, I strictly prohibit any automated scraping, crawling, harvesting, indexing, archiving, downloading, dataset collection, extraction, or other unauthorized acquisition of original content from this website for the purpose of training, fine-tuning, testing, evaluating, developing, or operating artificial intelligence or machine learning systems.
+
+This prohibition applies to all automated systems, bots, crawlers, scripts, agents, third-party services, and other technologies, whether operated by individuals, organizations, or commercial entities.
+
+This website and its contents are provided exclusively for human visitors to view and enjoy. No consent, license, authorization, or permission is granted for the automated collection, reproduction, storage, processing, redistribution, or reuse of my original content for any artificial intelligence or machine learning-related purpose.
+
+Any use of my original work for these purposes without my explicit prior written consent is strictly prohibited. Access to this website does not constitute, imply, or grant permission to use, collect, reproduce, or process its contents for AI-related purposes.
+
+All rights to my original work are expressly reserved.
